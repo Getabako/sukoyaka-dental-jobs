@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>求人情報 - 医療法人社団松下会 すこやか歯科クリニック</title>
-    <meta name="description" content="医療法人社団松下会 すこやか歯科クリニックの求人情報。2021年設立、熊本駅から徒歩10分。歯科医師・歯科衛生士・歯科助手を募集中。完全週休2日制、年間休日120日以上。">
+    <title>サッカー療育 - 発達障害の子どもたちのサポート</title>
+    <meta name="description" content="サッカー療育について、発達障害との関連性、アプローチ方法、具体的なカリキュラムなど包括的に解説します。">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -23,19 +23,17 @@
             font-family: 'Noto Sans JP', sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #f8fffe 0%, #f0f8f0 100%);
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
         }
 
-        /* Header */
         .header {
-            background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
-            color: #2d5a3d;
-            padding: 0;
-            box-shadow: 0 2px 20px rgba(45, 90, 61, 0.1);
+            background: linear-gradient(135deg, #2c5282 0%, #3182ce 100%);
+            color: white;
+            padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .header-container {
@@ -45,138 +43,61 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 80px;
         }
 
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
+            color: white;
             text-decoration: none;
-            color: #2d5a3d;
-            transition: transform 0.3s ease;
         }
 
-        .logo:hover {
-            transform: scale(1.05);
-        }
-
-        .header-info {
+        .nav-menu {
             display: flex;
-            align-items: center;
+            list-style: none;
             gap: 2rem;
         }
 
-        .contact-info {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-            color: #2d5a3d;
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
             font-weight: 500;
+            transition: color 0.3s ease;
         }
 
-        /* Hero Section */
+        .nav-menu a:hover {
+            color: #90cdf4;
+        }
+
         .hero {
-            background: linear-gradient(135deg, rgba(45, 90, 61, 0.8), rgba(106, 175, 8, 0.6)), url('https://picsum.photos/1920/1080?random=1');
+            background: linear-gradient(135deg, rgba(44, 82, 130, 0.9), rgba(49, 130, 206, 0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23f0f8ff" width="1200" height="800"/><circle fill="%23e6f3ff" cx="300" cy="200" r="100"/><circle fill="%23bfdbfe" cx="900" cy="400" r="150"/><circle fill="%2393c5fd" cx="600" cy="600" r="80"/></svg>');
             background-size: cover;
             background-position: center;
             color: white;
             text-align: center;
-            padding: 8rem 2rem 6rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            animation: float 20s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+            padding: 6rem 2rem 4rem;
         }
 
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
-            position: relative;
-            z-index: 2;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            animation: fadeInUp 1s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .hero-subtitle {
-            font-size: 1.4rem;
-            font-weight: 400;
+            font-size: 1.3rem;
             margin-bottom: 2rem;
-            color: white;
-            line-height: 1.8;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-            animation: fadeInUp 1s ease-out 0.2s both;
+            opacity: 0.9;
         }
 
-        .hero-catchphrase {
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: white;
-            margin-bottom: 3rem;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 20px;
-            border-left: 4px solid #ffffff;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            animation: fadeInUp 1s ease-out 0.4s both;
-        }
-
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1.5rem 3rem;
-            background: linear-gradient(135deg, #4a7c59, #2d5a3d);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(45, 90, 61, 0.2);
-            animation: fadeInUp 1s ease-out 0.6s both;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 40px rgba(45, 90, 61, 0.3);
-        }
-
-        /* Sections */
         .section {
-            padding: 5rem 0;
+            padding: 4rem 0;
         }
 
         .container {
@@ -185,116 +106,72 @@
             padding: 0 2rem;
         }
 
-        /* Contact Section */
-        .contact-section {
-            background: linear-gradient(135deg, #2d5a3d 0%, #4a7c59 100%);
-            color: white;
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c5282;
             text-align: center;
+            margin-bottom: 3rem;
         }
 
-        .contact-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
+        .card {
+            background: white;
             border-radius: 15px;
-            margin: 2rem 0;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
         }
 
-        /* Responsive */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+
+        .table th,
+        .table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .table th {
+            background: #f7fafc;
+            font-weight: 600;
+            color: #2c5282;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #3182ce;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 0.2rem;
+        }
+
         @media (max-width: 768px) {
-            .header-container {
-                justify-content: center;
-                text-align: center;
-            }
-            
-            .header-info {
+            .nav-menu {
                 display: none;
             }
-
-            .hero {
-                padding: 4rem 1rem;
-            }
-
+            
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
-
-            .hero-subtitle {
-                font-size: 1.2rem;
+            
+            .section-title {
+                font-size: 2rem;
             }
-
+            
             .container {
                 padding: 0 1rem;
-            }
-
-            /* Mobile specific styles for new sections */
-            .section h2 {
-                font-size: 2.2rem !important;
-            }
-
-            .section h3 {
-                font-size: 1.8rem !important;
-            }
-
-            /* Grid adjustments for mobile */
-            div[style*="grid-template-columns"] {
-                display: block !important;
-            }
-
-            div[style*="grid-template-columns"] > div {
-                margin-bottom: 2rem;
-            }
-
-            /* Job position cards mobile optimization */
-            div[style*="border-radius: 20px"] {
-                margin-left: 0.5rem !important;
-                margin-right: 0.5rem !important;
-            }
-
-            /* Contact cards mobile spacing */
-            .contact-card {
-                margin: 1rem 0 !important;
-            }
-
-            /* Diagnostic tags mobile wrap */
-            div[style*="flex-wrap: wrap"] span {
-                margin: 0.3rem !important;
-                font-size: 0.9rem !important;
-                padding: 0.6rem 1.2rem !important;
-            }
-
-            /* Hero catchphrase mobile */
-            .hero-catchphrase {
-                font-size: 1rem !important;
-                padding: 1.5rem !important;
-            }
-
-            /* Image responsiveness */
-            img {
-                max-width: 100% !important;
-                height: auto !important;
-            }
-
-            /* Flex containers mobile adjustment */
-            div[style*="display: flex"] {
-                flex-direction: column !important;
-                align-items: center !important;
-            }
-
-            div[style*="flex: 1"] {
-                flex: none !important;
-                width: 100% !important;
-                min-width: 280px !important;
-            }
-
-            /* Contact section mobile */
-            .contact-section img {
-                width: 95% !important;
-                margin: 0 auto !important;
-            }
-
-            /* Staff images mobile */
-            div[style*="gap: 2rem"] img {
-                margin: 0.5rem 0 !important;
             }
         }
     </style>
@@ -303,441 +180,739 @@
     <!-- Header -->
     <header class="header">
         <div class="header-container">
-            <a href="https://www.sukoyaka-dc.jp/" class="logo">すこやか歯科クリニック</a>
-            <div class="header-info">
-                <div class="contact-info">
-                    <i class="fas fa-phone"></i>
-                    <span>096-353-6000</span>
-                </div>
-                <div class="contact-info">
-                    <i class="fas fa-clock"></i>
-                    <span>9:00〜18:00（土曜〜17:00）</span>
-                </div>
-            </div>
+            <a href="#" class="logo">サッカー療育</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#about">サッカー療育とは</a></li>
+                    <li><a href="#features">特徴</a></li>
+                    <li><a href="#effects">効果</a></li>
+                    <li><a href="#approaches">アプローチ</a></li>
+                    <li><a href="#curriculum">カリキュラム</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>一緒に働きませんか？</h1>
-            <p class="hero-subtitle">
-                医療法人社団松下会<br>
-                すこやか歯科クリニック 求人情報
-            </p>
-            <div style="background: rgba(255,255,255,0.25); border-radius: 15px; padding: 1.5rem; margin: 2rem 0; font-size: 1.1rem; color: white; backdrop-filter: blur(5px);">
-                <strong>熊本駅から徒歩10分・土曜17時まで診療</strong><br>
-                あなたとご家族の"生涯健康"を守るトータルデンタルケア
-            </div>
-            <div class="hero-catchphrase">
-                「女性が働きやすく、やりがいとプライベートの両立を実現できる職場を目指しています。<br>
-                まずはお気軽に見学へどうぞ。」<br>
-                <strong>- 院長 山田 崇弘 -</strong>
-            </div>
-            <a href="#contact" class="cta-button">
-                <i class="fas fa-envelope"></i>
-                まずは見学・相談から
-            </a>
+            <h1>サッカー療育</h1>
+            <p class="hero-subtitle">発達障害の子どもたちの発達を支援する専門的アプローチ</p>
         </div>
     </section>
 
-    <!-- About Clinic Section -->
-    <section class="section" style="background: #f8fffe;">
+    <!-- サッカー療育について -->
+    <section id="about" class="section">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 4rem;">
-                <h2 style="font-size: 2.8rem; font-weight: 700; color: #2d5a3d; margin-bottom: 2rem;">すこやか歯科クリニックについて</h2>
-                <div style="display: flex; align-items: center; gap: 3rem; max-width: 1000px; margin: 0 auto; flex-wrap: wrap;">
-                    <div style="flex: 1; min-width: 300px;">
-                        <img src="https://picsum.photos/500/350?random=2" alt="すこやか歯科クリニックの清潔で明るい受付エリア。スタッフが笑顔で患者さんをお迎えしている様子" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(45,90,61,0.2);">
-                    </div>
-                    <div style="flex: 1; min-width: 300px; text-align: left;">
-                        <p style="font-size: 1.2rem; color: #4a7c59; line-height: 1.8; margin-bottom: 1.5rem;">
-                            <strong>2021年設立</strong><br>
-                            「全身の健康はお口の健康から」のコンセプトのもと、科学的根拠に基づく歯科医療で患者さま一人ひとりの健康寿命延伸に貢献します。
-                        </p>
-                        <div style="background: linear-gradient(135deg, rgba(45, 90, 61, 0.1), rgba(106, 175, 8, 0.1)); padding: 1.5rem; border-radius: 10px; border-left: 4px solid #4a7c59;">
-                            <p style="font-size: 1rem; color: #2d5a3d; font-weight: 500; margin: 0;">
-                                先進設備・徹底した衛生管理・訪問診療・予防メンテで<br>
-                                "治療"から"生涯サポート"へ
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 選ばれる理由 -->
-            <div style="margin-bottom: 5rem;">
-                <h3 style="font-size: 2.2rem; font-weight: 700; color: #2d5a3d; text-align: center; margin-bottom: 3rem;">選ばれる5つの理由</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div style="background: white; padding: 0; border-radius: 15px; box-shadow: 0 5px 20px rgba(45,90,61,0.1); text-align: center; overflow: hidden;">
-                        <img src="https://picsum.photos/300/200?random=3" alt="最新の歯科用CTとマイクロスコープを使用した精密治療の様子" style="width: 100%; height: 200px; object-fit: cover;">
-                        <div style="padding: 2rem;">
-                            <div style="font-size: 3rem; color: #4a7c59; margin-bottom: 1rem;"><i class="fas fa-microscope"></i></div>
-                            <h4 style="font-size: 1.3rem; font-weight: 600; color: #2d5a3d; margin-bottom: 1rem;">先進設備で精度の高い治療</h4>
-                            <p style="color: #666; line-height: 1.6;">歯科用CT・マイクロスコープ等の先進機器を導入し、安全・精密な治療環境を整備</p>
-                        </div>
-                    </div>
-                    <div style="background: white; padding: 0; border-radius: 15px; box-shadow: 0 5px 20px rgba(45,90,61,0.1); text-align: center; overflow: hidden;">
-                        <img src="https://picsum.photos/300/200?random=4" alt="クラスB滅菌器での器具滅菌作業と清潔な診療環境" style="width: 100%; height: 200px; object-fit: cover;">
-                        <div style="padding: 2rem;">
-                            <div style="font-size: 3rem; color: #4a7c59; margin-bottom: 1rem;"><i class="fas fa-shield-alt"></i></div>
-                            <h4 style="font-size: 1.3rem; font-weight: 600; color: #2d5a3d; margin-bottom: 1rem;">徹底した衛生管理と感染対策</h4>
-                            <p style="color: #666; line-height: 1.6;">クラスB滅菌器・プラズマ滅菌＆ディスポーザブル品で安心の衛生環境</p>
-                        </div>
-                    </div>
-                    <div style="background: white; padding: 0; border-radius: 15px; box-shadow: 0 5px 20px rgba(45,90,61,0.1); text-align: center; overflow: hidden;">
-                        <img src="https://picsum.photos/300/200?random=5" alt="子供連れの家族が快適に過ごせるファミリー向け診療室とキッズスペース" style="width: 100%; height: 200px; object-fit: cover;">
-                        <div style="padding: 2rem;">
-                            <div style="font-size: 3rem; color: #4a7c59; margin-bottom: 1rem;"><i class="fas fa-family"></i></div>
-                            <h4 style="font-size: 1.3rem; font-weight: 600; color: #2d5a3d; margin-bottom: 1rem;">親子で通いやすい医院づくり</h4>
-                            <p style="color: #666; line-height: 1.6;">特別診療室完備、駐車場34台で快適にご来院いただけます</p>
-                        </div>
-                    </div>
-                    <div style="background: white; padding: 0; border-radius: 15px; box-shadow: 0 5px 20px rgba(45,90,61,0.1); text-align: center; overflow: hidden;">
-                        <img src="https://picsum.photos/300/200?random=6" alt="スタッフが患者さんのご自宅を訪問し、ポータブル機器で歯科治療を行っている様子" style="width: 100%; height: 200px; object-fit: cover;">
-                        <div style="padding: 2rem;">
-                            <div style="font-size: 3rem; color: #4a7c59; margin-bottom: 1rem;"><i class="fas fa-home"></i></div>
-                            <h4 style="font-size: 1.3rem; font-weight: 600; color: #2d5a3d; margin-bottom: 1rem;">訪問診療で通院困難な方をサポート</h4>
-                            <p style="color: #666; line-height: 1.6;">医師と衛生士がご自宅・施設へ訪問。医療・介護保険適用で安心</p>
-                        </div>
-                    </div>
-                    <div style="background: white; padding: 0; border-radius: 15px; box-shadow: 0 5px 20px rgba(45,90,61,0.1); text-align: center; overflow: hidden;">
-                        <img src="https://picsum.photos/300/200?random=7" alt="医師・衛生士・助手が連携して治療にあたるチーム医療の様子" style="width: 100%; height: 200px; object-fit: cover;">
-                        <div style="padding: 2rem;">
-                            <div style="font-size: 3rem; color: #4a7c59; margin-bottom: 1rem;"><i class="fas fa-user-md"></i></div>
-                            <h4 style="font-size: 1.3rem; font-weight: 600; color: #2d5a3d; margin-bottom: 1rem;">経験豊富なドクターと多職種連携</h4>
-                            <p style="color: #666; line-height: 1.6;">歯科医師4名・歯科衛生士8名・歯科助手2名のチーム医療</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- スタッフ情報 -->
-            <div style="background: white; padding: 3rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(45,90,61,0.1); margin-bottom: 5rem;">
-                <h3 style="font-size: 2.2rem; font-weight: 700; color: #2d5a3d; text-align: center; margin-bottom: 3rem;">スタッフ情報</h3>
-                <div style="display: flex; align-items: center; gap: 3rem; margin-bottom: 3rem; flex-wrap: wrap;">
-                    <div style="flex: 1; min-width: 300px;">
-                        <img src="https://picsum.photos/500/350?random=8" alt="すこやか歯科クリニックのスタッフ全員が笑顔で並んだ集合写真。医師・衛生士・助手が和気あいあいとした雰囲気" style="width: 100%; border-radius: 15px; box-shadow: 0 5px 15px rgba(45,90,61,0.2);">
-                    </div>
-                    <div style="flex: 1; min-width: 300px;">
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
-                            <div>
-                                <div style="font-size: 2.5rem; color: #4a7c59; margin-bottom: 1rem;"><i class="fas fa-users"></i></div>
-                                <h4 style="font-size: 1.8rem; font-weight: 600; color: #2d5a3d; margin-bottom: 0.5rem;">総勢15名</h4>
-                                <p style="color: #666;">歯科医師4名・歯科衛生士8名・歯科助手2名</p>
-                            </div>
-                            <div>
-                                <div style="font-size: 2.5rem; color: #4a7c59; margin-bottom: 1rem;"><i class="fas fa-birthday-cake"></i></div>
-                                <h4 style="font-size: 1.8rem; font-weight: 600; color: #2d5a3d; margin-bottom: 0.5rem;">平均年齢34歳</h4>
-                                <p style="color: #666;">若々しく活気のある職場環境</p>
-                            </div>
-                            <div style="grid-column: 1 / -1;">
-                                <div style="font-size: 2.5rem; color: #4a7c59; margin-bottom: 1rem;"><i class="fas fa-heart"></i></div>
-                                <h4 style="font-size: 1.8rem; font-weight: 600; color: #2d5a3d; margin-bottom: 0.5rem;">離職率の低さ</h4>
-                                <p style="color: #666;">開業以来 歯科衛生士離職0名<br>スタッフ定着率◎</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
-                    <img src="https://picsum.photos/250/200?random=9" alt="スタッフが患者さんと笑顔で会話している様子。明るく親しみやすい雰囲気" style="border-radius: 10px; box-shadow: 0 3px 10px rgba(45,90,61,0.2);">
-                    <img src="https://picsum.photos/250/200?random=10" alt="研修中のスタッフたち。院長からの指導を受けながら技術向上に取り組む様子" style="border-radius: 10px; box-shadow: 0 3px 10px rgba(45,90,61,0.2);">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Job Positions Section -->
-    <section class="section" style="background: linear-gradient(135deg, #f0f8f0 0%, #e8f5e8 100%);">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 4rem;">
-                <h2 style="font-size: 2.8rem; font-weight: 700; color: #2d5a3d; margin-bottom: 1rem;">募集職種</h2>
-                <p style="font-size: 1.2rem; color: #4a7c59; max-width: 600px; margin: 0 auto; line-height: 1.8;">
-                    完全週休2日制・年間休日120日以上<br>
-                    女性が働きやすい環境づくりに取り組んでいます
-                </p>
-            </div>
-
-            <!-- 歯科医師 -->
-            <div style="background: white; margin-bottom: 3rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(45,90,61,0.1); overflow: hidden;">
-                <div style="background: linear-gradient(135deg, #2d5a3d, #4a7c59); color: white; padding: 2rem; text-align: center;">
-                    <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;"><i class="fas fa-user-md"></i> 歯科医師</h3>
-                    <p style="font-size: 1.1rem; opacity: 0.9;">一般・小児・審美・矯正・口腔外科・訪問診療</p>
-                </div>
-                <div style="display: flex; align-items: stretch; flex-wrap: wrap;">
-                    <div style="flex: 1; min-width: 300px; padding: 2rem;">
-                        <img src="https://picsum.photos/400/250?random=11" alt="歯科医師が患者さんに丁寧に治療説明をしている様子。マイクロスコープを使用した精密治療" style="width: 100%; border-radius: 10px; box-shadow: 0 3px 10px rgba(45,90,61,0.2); margin-bottom: 2rem;">
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                            <div>
-                                <h4 style="color: #2d5a3d; font-weight: 600; margin-bottom: 1rem; border-bottom: 2px solid #e8f5e8; padding-bottom: 0.5rem;">常勤</h4>
-                                <p style="margin-bottom: 0.5rem;"><strong>給与:</strong> 月給700,000円〜（経験5年以上の目安）</p>
-                                <p style="margin-bottom: 0.5rem;"><strong>勤務時間:</strong> 平日 8:45-12:45 / 14:00-18:15<br>土 8:45-12:45 / 14:00-17:00</p>
-                                <p style="margin-bottom: 0.5rem;"><strong>休日:</strong> 完全週休2日（日＋他1日）／年間休日120日以上</p>
-                                <p style="color: #4a7c59; font-size: 0.9rem;">※歩合無／賞与無／最低保証無／試用期間3ヶ月（給与同額）</p>
-                            </div>
-                            <div>
-                                <h4 style="color: #2d5a3d; font-weight: 600; margin-bottom: 1rem; border-bottom: 2px solid #e8f5e8; padding-bottom: 0.5rem;">非常勤</h4>
-                                <p style="margin-bottom: 0.5rem;"><strong>給与:</strong> 時給4,300円〜（昇給あり）</p>
-                                <p style="margin-bottom: 0.5rem;"><strong>勤務時間:</strong> 平日 8:45-12:45 / 14:00-18:15<br>土 8:45-12:45 / 14:00-17:00</p>
-                                <p style="margin-bottom: 0.5rem;"><strong>休日:</strong> 週1日〜OK／日曜定休／有給あり</p>
-                                <p style="color: #4a7c59; font-size: 0.9rem;">※試用期間3ヶ月（時給同額）</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 歯科衛生士 -->
-            <div style="background: white; margin-bottom: 3rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(45,90,61,0.1); overflow: hidden;">
-                <div style="background: linear-gradient(135deg, #4a7c59, #2d5a3d); color: white; padding: 2rem; text-align: center;">
-                    <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;"><i class="fas fa-tooth"></i> 歯科衛生士</h3>
-                    <p style="font-size: 1.1rem; opacity: 0.9;">医師補助・スケーリング・ブラッシング指導／外来＋訪問診療</p>
-                </div>
-                <div style="display: flex; align-items: stretch; flex-wrap: wrap;">
-                    <div style="flex: 1; min-width: 300px; padding: 2rem;">
-                        <div style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
-                            <img src="https://picsum.photos/250/180?random=12" alt="歯科衛生士が患者さんに歯のクリーニングを行っている様子。丁寧で優しいケア" style="flex: 1; min-width: 200px; border-radius: 10px; box-shadow: 0 3px 10px rgba(45,90,61,0.2);">
-                            <img src="https://picsum.photos/250/180?random=13" alt="歯科衛生士が患者さんにブラッシング指導をしている場面。親身になって相談に乗る様子" style="flex: 1; min-width: 200px; border-radius: 10px; box-shadow: 0 3px 10px rgba(45,90,61,0.2);">
-                        </div>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                            <div>
-                                <h4 style="color: #2d5a3d; font-weight: 600; margin-bottom: 1rem; border-bottom: 2px solid #e8f5e8; padding-bottom: 0.5rem;">正社員</h4>
-                                <p style="margin-bottom: 0.5rem;"><strong>給与:</strong> 月給250,000〜350,000円（昇給・賞与あり）</p>
-                                <p style="margin-bottom: 0.5rem;"><strong>勤務時間:</strong> 月〜金 8:45-12:45 / 14:00-18:15<br>土 8:45-12:45 / 14:00-17:15（休憩75分）</p>
-                                <p style="margin-bottom: 0.5rem;"><strong>休日:</strong> 完全週休2日（日＋他1日）／年間休日120日以上</p>
-                                <p style="color: #4a7c59; font-size: 0.9rem;">※45〜60分のゆとり枠でプロフェッショナルケア</p>
-                            </div>
-                            <div>
-                                <h4 style="color: #2d5a3d; font-weight: 600; margin-bottom: 1rem; border-bottom: 2px solid #e8f5e8; padding-bottom: 0.5rem;">パート</h4>
-                                <p style="margin-bottom: 0.5rem;"><strong>給与:</strong> 時給1,500〜2,000円（昇給あり）</p>
-                                <p style="margin-bottom: 0.5rem;"><strong>勤務時間:</strong> 平日・土曜 上記時間帯で応相談</p>
-                                <p style="margin-bottom: 0.5rem;"><strong>休日:</strong> 週1日〜可／応相談／日曜定休</p>
-                                <p style="color: #4a7c59; font-size: 0.9rem;">※午前のみ・午後のみ可</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 歯科助手・受付・事務 -->
-            <div style="background: white; margin-bottom: 3rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(45,90,61,0.1); overflow: hidden;">
-                <div style="background: linear-gradient(135deg, #6aaf08, #4a7c59); color: white; padding: 2rem; text-align: center;">
-                    <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;"><i class="fas fa-clipboard"></i> 歯科助手・受付・事務</h3>
-                    <p style="font-size: 1.1rem; opacity: 0.9;">受付・診療補助・在庫管理・院内清掃</p>
-                </div>
-                <div style="display: flex; align-items: stretch; flex-wrap: wrap;">
-                    <div style="flex: 1; min-width: 300px; padding: 2rem;">
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
-                            <img src="https://picsum.photos/200/150?random=14" alt="受付スタッフが笑顔で電話対応をしている様子。丁寧な応対でお客様をサポート" style="border-radius: 10px; box-shadow: 0 3px 10px rgba(45,90,61,0.2);">
-                            <img src="https://picsum.photos/200/150?random=15" alt="歯科助手が診療器具の準備と滅菌作業を行っている場面。清潔で整理された環境" style="border-radius: 10px; box-shadow: 0 3px 10px rgba(45,90,61,0.2);">
-                            <img src="https://picsum.photos/200/150?random=16" alt="事務スタッフがパソコンで予約管理や書類作成をしている様子。効率的な業務環境" style="border-radius: 10px; box-shadow: 0 3px 10px rgba(45,90,61,0.2);">
-                        </div>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                            <div>
-                                <h4 style="color: #2d5a3d; font-weight: 600; margin-bottom: 1rem; border-bottom: 2px solid #e8f5e8; padding-bottom: 0.5rem;">正社員</h4>
-                                <p style="margin-bottom: 0.5rem;"><strong>給与:</strong> 月給180,000〜300,000円（経験・能力考慮）</p>
-                                <p style="margin-bottom: 0.5rem;"><strong>勤務時間:</strong> 月〜金 8:45-12:45 / 14:00-18:15<br>土 8:45-12:45 / 14:00-17:15（休憩75分）</p>
-                                <p style="margin-bottom: 0.5rem;"><strong>休日:</strong> 完全週休2日（日＋平日1日シフト）／年間休日120日以上</p>
-                                <p style="color: #4a7c59; font-size: 0.9rem;">※残業月3時間以下</p>
-                            </div>
-                            <div>
-                                <h4 style="color: #2d5a3d; font-weight: 600; margin-bottom: 1rem; border-bottom: 2px solid #e8f5e8; padding-bottom: 0.5rem;">パート</h4>
-                                <p style="margin-bottom: 0.5rem;"><strong>給与:</strong> 時給1,100〜1,800円（昇給あり）</p>
-                                <p style="margin-bottom: 0.5rem;"><strong>勤務時間:</strong> 8:45-12:45／14:00-18:15の間で4h～応相談</p>
-                                <p style="margin-bottom: 0.5rem;"><strong>休日:</strong> 週1日〜OK／日曜定休＋シフト制</p>
-                                <p style="color: #4a7c59; font-size: 0.9rem;">※午前のみ・午後のみOK</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits and Education Section -->
-    <section class="section" style="background: #f8fffe;">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 4rem;">
-                <h2 style="font-size: 2.8rem; font-weight: 700; color: #2d5a3d; margin-bottom: 1rem;">福利厚生・教育体制</h2>
-                <p style="font-size: 1.2rem; color: #4a7c59; max-width: 600px; margin: 0 auto; line-height: 1.8;">
-                    働きやすい環境と成長をサポートする制度が充実
-                </p>
-            </div>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem;">
-                <!-- 福利厚生 -->
-                <div style="background: white; padding: 0; border-radius: 20px; box-shadow: 0 10px 30px rgba(45,90,61,0.1); overflow: hidden;">
-                    <img src="https://picsum.photos/400/200?random=17" alt="スタッフが休憩室でリラックスしている様子。広々とした休憩室で無料ドリンクを楽しむ職場環境" style="width: 100%; height: 200px; object-fit: cover;">
-                    <div style="padding: 2.5rem;">
-                        <h3 style="font-size: 1.8rem; font-weight: 700; color: #2d5a3d; margin-bottom: 2rem; text-align: center;">
-                            <i class="fas fa-heart" style="color: #4a7c59; margin-right: 0.5rem;"></i>福利厚生
-                        </h3>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-                                <i class="fas fa-check" style="position: absolute; left: 0; top: 0.2rem; color: #4a7c59;"></i>
-                                社会保険完備（雇用・労災・健康・厚生年金）
-                            </li>
-                            <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-                                <i class="fas fa-check" style="position: absolute; left: 0; top: 0.2rem; color: #4a7c59;"></i>
-                                通勤手当上限1万円
-                            </li>
-                            <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-                                <i class="fas fa-check" style="position: absolute; left: 0; top: 0.2rem; color: #4a7c59;"></i>
-                                退職金制度（勤続1年以上）
-                            </li>
-                            <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-                                <i class="fas fa-check" style="position: absolute; left: 0; top: 0.2rem; color: #4a7c59;"></i>
-                                年末年始・お盆休暇
-                            </li>
-                            <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-                                <i class="fas fa-check" style="position: absolute; left: 0; top: 0.2rem; color: #4a7c59;"></i>
-                                制服貸与
-                            </li>
-                            <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-                                <i class="fas fa-check" style="position: absolute; left: 0; top: 0.2rem; color: #4a7c59;"></i>
-                                昇給・賞与年2回（2ヶ月分以上）
-                            </li>
-                            <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-                                <i class="fas fa-check" style="position: absolute; left: 0; top: 0.2rem; color: #4a7c59;"></i>
-                                広い休憩室＋無料ドリンク
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- 教育体制 -->
-                <div style="background: white; padding: 0; border-radius: 20px; box-shadow: 0 10px 30px rgba(45,90,61,0.1); overflow: hidden;">
-                    <img src="https://picsum.photos/400/200?random=18" alt="院長が新人スタッフに丁寧に指導している研修の様子。セミナー会場での学習風景" style="width: 100%; height: 200px; object-fit: cover;">
-                    <div style="padding: 2.5rem;">
-                        <h3 style="font-size: 1.8rem; font-weight: 700; color: #2d5a3d; margin-bottom: 2rem; text-align: center;">
-                            <i class="fas fa-graduation-cap" style="color: #4a7c59; margin-right: 0.5rem;"></i>教育体制
-                        </h3>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-                                <i class="fas fa-star" style="position: absolute; left: 0; top: 0.2rem; color: #6aaf08;"></i>
-                                院長フォローアップ研修（1ヶ月オリエンテーション）
-                            </li>
-                            <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-                                <i class="fas fa-star" style="position: absolute; left: 0; top: 0.2rem; color: #6aaf08;"></i>
-                                外部研修・セミナー費用全額補助
-                            </li>
-                            <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-                                <i class="fas fa-star" style="position: absolute; left: 0; top: 0.2rem; color: #6aaf08;"></i>
-                                院内勉強会・マニュアル完備
-                            </li>
-                            <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-                                <i class="fas fa-star" style="position: absolute; left: 0; top: 0.2rem; color: #6aaf08;"></i>
-                                クラスB・プラズマ滅菌＆ディスポ品
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 診療メニュー -->
-            <div style="background: linear-gradient(135deg, rgba(45, 90, 61, 0.05), rgba(106, 175, 8, 0.05)); padding: 3rem; border-radius: 20px; margin-top: 4rem; text-align: center;">
-                <h3 style="font-size: 2rem; font-weight: 700; color: #2d5a3d; margin-bottom: 2rem;">診療メニュー</h3>
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
-                    <span style="background: white; padding: 0.8rem 1.5rem; border-radius: 25px; color: #2d5a3d; font-weight: 500; box-shadow: 0 3px 10px rgba(45,90,61,0.1);">一般歯科</span>
-                    <span style="background: white; padding: 0.8rem 1.5rem; border-radius: 25px; color: #2d5a3d; font-weight: 500; box-shadow: 0 3px 10px rgba(45,90,61,0.1);">歯周病</span>
-                    <span style="background: white; padding: 0.8rem 1.5rem; border-radius: 25px; color: #2d5a3d; font-weight: 500; box-shadow: 0 3px 10px rgba(45,90,61,0.1);">予防・クリーニング</span>
-                    <span style="background: white; padding: 0.8rem 1.5rem; border-radius: 25px; color: #2d5a3d; font-weight: 500; box-shadow: 0 3px 10px rgba(45,90,61,0.1);">ホワイトニング</span>
-                    <span style="background: white; padding: 0.8rem 1.5rem; border-radius: 25px; color: #2d5a3d; font-weight: 500; box-shadow: 0 3px 10px rgba(45,90,61,0.1);">審美修復</span>
-                    <span style="background: white; padding: 0.8rem 1.5rem; border-radius: 25px; color: #2d5a3d; font-weight: 500; box-shadow: 0 3px 10px rgba(45,90,61,0.1);">矯正歯科</span>
-                    <span style="background: white; padding: 0.8rem 1.5rem; border-radius: 25px; color: #2d5a3d; font-weight: 500; box-shadow: 0 3px 10px rgba(45,90,61,0.1);">口腔外科</span>
-                    <span style="background: white; padding: 0.8rem 1.5rem; border-radius: 25px; color: #2d5a3d; font-weight: 500; box-shadow: 0 3px 10px rgba(45,90,61,0.1);">インプラント</span>
-                    <span style="background: white; padding: 0.8rem 1.5rem; border-radius: 25px; color: #2d5a3d; font-weight: 500; box-shadow: 0 3px 10px rgba(45,90,61,0.1);">小児歯科</span>
-                    <span style="background: white; padding: 0.8rem 1.5rem; border-radius: 25px; color: #2d5a3d; font-weight: 500; box-shadow: 0 3px 10px rgba(45,90,61,0.1);">訪問歯科診療</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section contact-section" id="contact">
-        <div class="container">
-            <div style="max-width: 800px; margin: 0 auto;">
-                <h2 style="font-size: 2.8rem; font-weight: 700; margin-bottom: 2rem; color: white; text-align: center;">お問い合わせ・応募方法</h2>
-                <p style="font-size: 1.3rem; margin-bottom: 3rem; color: rgba(255,255,255,0.9); text-align: center;">
-                    まずはお気軽に見学や相談からお始めください
+            <h2 class="section-title">サッカー療育について</h2>
+            <div class="card">
+                <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #4a5568;">
+                    サッカー療育とは、サッカーを療育のツールとして活用し、発達障害や特性のある子どもたちの発達を支援する方法です。
+                    サッカー指導とは異なり、サッカーを通じて5つの発達領域にアプローチします。
                 </p>
                 
-                <div style="text-align: center; margin-bottom: 3rem;">
-                    <img src="https://picsum.photos/600/300?random=19" alt="すこやか歯科クリニックの外観。モダンで清潔感のある建物と広い駐車場。JR熊本駅から徒歩10分の好立地" style="width: 100%; max-width: 600px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>発達領域</th>
+                            <th>アプローチ内容</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>健康・生活</strong></td>
+                            <td>定期的な運動習慣を通じて身体的な健康を促進し、生活リズムの安定や体力向上につなげます。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>運動・感覚</strong></td>
+                            <td>基本的な運動能力やバランス感覚を向上させ、身体の使い方や空間認識能力を育みます。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>認知・行動</strong></td>
+                            <td>状況判断力や思考の切り替え、ルールの理解と遵守など、認知機能と適切な行動選択能力を育てます。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>言語・コミュニケーション</strong></td>
+                            <td>チームメイトとの意思疎通やコーチからの指示理解など、言語的・非言語的コミュニケーション能力を高めます。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>人間関係・社会性</strong></td>
+                            <td>チームプレーを通して協調性や役割理解、仲間との関係構築などの社会性を育みます。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 
-                <div class="contact-card">
-                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem;"><i class="fas fa-phone"></i> 電話でのお問い合わせ</h3>
-                    <p style="font-size: 1.1rem; line-height: 1.6;">096-353-6000<br>
-                    受付時間：9:00〜18:00（土曜〜17:00）<br>
-                    担当：院長 山田 崇弘</p>
+    <!-- サッカーが療育ツールとして最適な5つの特徴 -->
+    <section id="features" class="section" style="background: #f7fafc;">
+        <div class="container">
+            <h2 class="section-title">サッカーが療育ツールとして最適な5つの特徴</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3 style="color: #3182ce; margin-bottom: 1rem;"><i class="fas fa-1"></i> ルールがシンプル</h3>
+                    <p>「手を使わずにボールをゴールに入れる」という基本ルールは非常に単純明快です。複雑なルールやプロセスを理解するのが苦手な子どもでも参加しやすい環境を提供します。</p>
                 </div>
-
-                <div class="contact-card">
-                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem;"><i class="fas fa-envelope"></i> WEBフォーム</h3>
-                    <p style="font-size: 1.1rem; line-height: 1.6;">24時間受付・カレンダーから日時選択<br>
-                    お気軽にご質問・ご相談ください<br>
-                    見学のご予約も承ります</p>
+                <div class="card">
+                    <h3 style="color: #3182ce; margin-bottom: 1rem;"><i class="fas fa-2"></i> 自由度が高い</h3>
+                    <p>プレー選択が自由で、様々なルールで縛られることが少ないため、自己判断・自己決定の能力を自然に身につけることができます。</p>
                 </div>
-
-                <div class="contact-card">
-                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem;"><i class="fab fa-instagram"></i> Instagram</h3>
-                    <p style="font-size: 1.1rem; line-height: 1.6;">@sukoyaka_dentalclinic<br>
-                    症例写真・セルフケアのコツを発信中</p>
+                <div class="card">
+                    <h3 style="color: #3182ce; margin-bottom: 1rem;"><i class="fas fa-3"></i> ポジションと役割がある</h3>
+                    <p>各選手には得意なこと、性格に合ったポジションを選ぶことができ、「社会の縮図」としての役割理解を学ぶことができます。</p>
                 </div>
-
-                <div style="margin-top: 3rem; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 15px;">
-                    <h3 style="margin-bottom: 1rem; font-size: 1.3rem;"><i class="fas fa-map-marker-alt"></i> アクセス</h3>
-                    <p style="font-size: 1.1rem; line-height: 1.6;">〒860-0821 熊本市中央区本山1-6-19<br>
-                    <strong>JR熊本駅 徒歩10分</strong><br>
-                    バス停「九州中央リハビリテーション学院前」徒歩2分<br>
-                    <strong>駐車場2か所・34台完備</strong></p>
+                <div class="card">
+                    <h3 style="color: #3182ce; margin-bottom: 1rem;"><i class="fas fa-4"></i> 攻守の切り替えがある</h3>
+                    <p>試合中に何度も「守る」から「攻める」への切り替えが行われ、思考の切り替えを自然と学ぶことができます。</p>
                 </div>
-
-                <div style="margin-top: 2rem; padding: 2rem; background: rgba(255,255,255,0.15); border-radius: 15px; text-align: center;">
-                    <h3 style="margin-bottom: 1rem; font-size: 1.4rem;"><i class="fas fa-clock"></i> 診療時間</h3>
-                    <div style="background: rgba(255,255,255,0.2); padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem;">
-                        <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 0.5rem;">
-                            <strong>平日</strong> 9:00〜12:45 / 14:00〜18:15<br>
-                            <strong>土曜</strong> 9:00〜12:45 / 14:00〜17:00
-                        </p>
-                        <p style="font-size: 1rem; color: rgba(255,255,255,0.8);">休診日：日曜日</p>
-                    </div>
-                    <p style="font-size: 1rem; color: rgba(255,255,255,0.9);">
-                        ※初診の方はWEB予約または電話でご予約ください<br>
-                        ※保険診療を主軸に明確な料金提示<br>
-                        ※キャッシュレス・デンタルローン対応
-                    </p>
+                <div class="card">
+                    <h3 style="color: #3182ce; margin-bottom: 1rem;"><i class="fas fa-5"></i> 勝ち負けがある</h3>
+                    <p>明確な勝敗を通じて感情を自然に芽生えさせ、チームで共有することで喜びや悔しさを学び、次への意欲につなげることができます。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- JavaScript -->
-    <script>
-        // スムーススクロール
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+    <!-- サッカー療育の効果 -->
+    <section id="effects" class="section">
+        <div class="container">
+            <h2 class="section-title">サッカー療育の効果</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3 style="color: #3182ce; margin-bottom: 1rem;"><i class="fas fa-running"></i> 運動機会の増加と身体的健康の促進</h3>
+                    <p>定期的に体を動かす時間を確保することで、運動不足の解消や基本的な運動能力の向上に効果的です。走る、跳ぶ、投げるなどの基本的な運動能力や協調性、バランス感覚が育まれます。</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: #3182ce; margin-bottom: 1rem;"><i class="fas fa-comments"></i> コミュニケーション能力の向上</h3>
+                    <p>チームスポーツならではのコミュニケーション機会を通じて、言語的・非言語的なコミュニケーション能力が向上します。相手の意図を読み取ったり、仲間と協力したりする経験が積み重なります。</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: #3182ce; margin-bottom: 1rem;"><i class="fas fa-heart"></i> 自己肯定感の支援</h3>
+                    <p>仲間から感謝されたり、褒められたりする機会が多く、自己肯定感を高める強力な要因となります。信頼する人からの称賛という「社会的な報酬」が子どもたちの意欲を引き出します。</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: #3182ce; margin-bottom: 1rem;"><i class="fas fa-users"></i> 集団行動とルール遵守の学習</h3>
+                    <p>チームの動きに自分の行動を合わせる経験を通じて、自制する力や集団のルールを守る重要性を学びます。社会のルールを遵守するスキルの習得にもつながります。</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: #3182ce; margin-bottom: 1rem;"><i class="fas fa-smile"></i> ストレス発散と精神的健康の促進</h3>
+                    <p>特にADHDの子どもたちは、多動・衝動性のあるエネルギーを適切に発散できることで、日常生活が落ち着きやすくなります。満足感や達成感も得られます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        // ヘッダーのスクロール効果
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 100) {
-                header.style.background = 'linear-gradient(135deg, rgba(232, 245, 232, 0.95) 0%, rgba(212, 237, 218, 0.95) 100%)';
-            } else {
-                header.style.background = 'linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%)';
-            }
-        });
-    </script>
+    <!-- 発達障害別アプローチ -->
+    <section id="approaches" class="section" style="background: #f7fafc;">
+        <div class="container">
+            <h2 class="section-title">発達障害別アプローチ</h2>
+            
+            <!-- ASD -->
+            <div class="card" style="border-left: 5px solid #e53e3e;">
+                <h3 style="color: #e53e3e; margin-bottom: 2rem;"><i class="fas fa-brain"></i> 自閉スペクトラム症（ASD）</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                    <div>
+                        <h4 style="color: #2c5282; margin-bottom: 1rem;">特性</h4>
+                        <p>社会的コミュニケーションの困難さや限定された興味・活動パターン、感覚過敏などの特性があります。また、変化への適応が難しく、予測可能性を好む傾向があります。</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #2c5282; margin-bottom: 1rem;">期待できる効果</h4>
+                        <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                            <li>社会的スキルの向上：チームスポーツを通じて、他者との協力やコミュニケーション能力が向上</li>
+                            <li>柔軟性の向上：試合状況の変化に対応することで、状況に応じた行動の切り替えを学習</li>
+                            <li>感覚統合の促進：様々な動きや感覚刺激を経験することで、感覚統合能力が向上</li>
+                            <li>ルーティンの形成：練習の流れが一定であることで、安心感を得ながら新しいスキルを習得</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color: #2c5282; margin-bottom: 1rem;">具体的な活動例</h4>
+                    <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                        <li>予測可能な練習構造：毎回同じウォームアップから始め、視覚的なスケジュールを用いて練習の流れを明示</li>
+                        <li>段階的な社会的交流：最初は平行プレイから始め、徐々にペアワーク、小グループ活動へと発展</li>
+                        <li>視覚的サポート：コーンやマーカーを使って動く場所を明確にし、視覚的な手がかりを多く取り入れ</li>
+                        <li>感覚調整活動：感覚過敏がある場合は、徐々に慣らしていく活動を取り入れ</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ADHD多動/衝動性型 -->
+            <div class="card" style="border-left: 5px solid #38a169;">
+                <h3 style="color: #38a169; margin-bottom: 2rem;"><i class="fas fa-bolt"></i> 注意欠如・多動症（ADHD）多動/衝動性型</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                    <div>
+                        <h4 style="color: #2c5282; margin-bottom: 1rem;">特性</h4>
+                        <p>多動/衝動性タイプのADHDの子どもたちは、じっとしていることが難しく、順番を待つことが苦手です。また、エネルギーが溢れており、体を動かしたい欲求が強い傾向があります。</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #2c5282; margin-bottom: 1rem;">期待できる効果</h4>
+                        <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                            <li>エネルギーの適切な発散：運動量の多いサッカーを通じて、過剰なエネルギーを発散</li>
+                            <li>自己制御能力の向上：ルールのある活動を通じて、衝動性をコントロールする力が身につく</li>
+                            <li>集中力の向上：興味のある活動に取り組むことで、持続的な注意力が養われる</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color: #2c5282; margin-bottom: 1rem;">具体的な活動例</h4>
+                    <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                        <li>高運動量のドリル：連続的な動きを含むドリルを多く取り入れ、エネルギーを発散</li>
+                        <li>短時間の集中的な活動：一つの活動を長く続けるのではなく、短い時間で区切った多様な活動を提供</li>
+                        <li>ルール遵守ゲーム：簡単なルールから始め、徐々に複雑なルールを導入するゲームを実施</li>
+                        <li>待ち時間を最小限にし、常に活動的な状態を維持</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ADHD不注意型 -->
+            <div class="card" style="border-left: 5px solid #d69e2e;">
+                <h3 style="color: #d69e2e; margin-bottom: 2rem;"><i class="fas fa-eye"></i> 注意欠如・多動症（ADHD）不注意型</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                    <div>
+                        <h4 style="color: #2c5282; margin-bottom: 1rem;">特性</h4>
+                        <p>不注意タイプのADHDの子どもたちは、注意が散りやすく、細部に注意を払うことが難しい傾向があります。</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #2c5282; margin-bottom: 1rem;">期待できる効果</h4>
+                        <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                            <li>注意力の向上：ボールに集中する活動を通じて、注意を持続する力が養われる</li>
+                            <li>組織化能力の向上：チームプレーを通じて、計画性や組織化能力が向上</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color: #2c5282; margin-bottom: 1rem;">具体的な活動例</h4>
+                    <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                        <li>注意集中ドリル：ボールコントロールやドリブルなど、ボールに集中する練習を実施</li>
+                        <li>視覚的な手がかり：色分けしたビブスやコーンを使用し、視覚的に分かりやすい環境を作成</li>
+                        <li>明確で簡潔な指示を心がけ、ポジティブなフィードバックを多く取り入れ</li>
+                        <li>必要に応じて短い休憩を取り入れ、集中力の回復を図る</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- DCD -->
+            <div class="card" style="border-left: 5px solid #805ad5;">
+                <h3 style="color: #805ad5; margin-bottom: 2rem;"><i class="fas fa-puzzle-piece"></i> 発達性協調運動障害（DCD）</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                    <div>
+                        <h4 style="color: #2c5282; margin-bottom: 1rem;">特性</h4>
+                        <p>発達性協調運動障害（DCD）の子どもたちは、運動の協調性に困難を抱え、不器用さが目立つことがあります。また、新しい運動スキルの習得に時間がかかる傾向があります。</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #2c5282; margin-bottom: 1rem;">期待できる効果</h4>
+                        <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                            <li>運動スキルの向上：繰り返しの練習を通じて、基本的な運動スキルが向上</li>
+                            <li>身体認識の向上：様々な動きを経験することで、自分の身体の使い方への理解が深まる</li>
+                            <li>自信の向上：成功体験を積み重ねることで、運動に対する自信が高まる</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color: #2c5282; margin-bottom: 1rem;">具体的な活動例</h4>
+                    <ul style="list-style-type: disc; margin-left: 1.5rem;">
+                        <li>基本動作の分解練習：複雑な動きを小さなステップに分解して練習</li>
+                        <li>反復練習：同じ動きを繰り返し練習し、動きのパターンを身体に覚えさせる</li>
+                        <li>成功体験の創出：難易度を調整し、必ず成功できる経験を提供</li>
+                        <li>焦らず、一人ひとりのペースを尊重し、視覚的なデモンストレーションを多用</li>
+                    </ul>
+                </div>
+            </div>
+                 </div>
+     </section>
+
+     <!-- 個別最適アプローチ -->
+     <section id="assessment" class="section">
+         <div class="container">
+             <h2 class="section-title">個別最適アプローチ</h2>
+             <div class="card">
+                 <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #4a5568;">
+                     サッカー療育では、一人ひとりの子どもの特性に合わせた専門的なプログラムを提供しています。
+                     子どもの行動観察と保護者からのヒアリングによる綿密なアセスメントを基に、個別のニーズに応じたカリキュラムを設計します。
+                 </p>
+                 
+                 <h3 style="color: #2c5282; margin: 2rem 0 1rem 0;">専門的アセスメントプロセス</h3>
+                 <div class="grid">
+                     <div style="background: #f0f8ff; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #3182ce;">
+                         <h4 style="color: #2c5282; margin-bottom: 1rem;"><i class="fas fa-eye"></i> 行動観察</h4>
+                         <p>サッカー活動中の子どもの行動を専門家が観察し、運動能力、社会性、コミュニケーション、集中力などを評価します。</p>
+                     </div>
+                     <div style="background: #f0fff4; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #38a169;">
+                         <h4 style="color: #2c5282; margin-bottom: 1rem;"><i class="fas fa-comments"></i> 保護者ヒアリング</h4>
+                         <p>家庭や学校での様子、得意なこと、苦手なこと、興味のあることなど、詳細な情報を保護者から収集します。</p>
+                     </div>
+                     <div style="background: #fffaf0; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #d69e2e;">
+                         <h4 style="color: #2c5282; margin-bottom: 1rem;"><i class="fas fa-chart-bar"></i> 専門的評価</h4>
+                         <p>発達支援の専門家が収集した情報を分析し、子どもの発達段階や特性に最適なプログラムを設計します。</p>
+                     </div>
+                 </div>
+
+                 <h3 style="color: #2c5282; margin: 3rem 0 1rem 0;">詳細なアセスメントポイント</h3>
+                 <p style="margin-bottom: 2rem;">
+                     サッカー療育では、一般的な発達アセスメントをサッカー場面に応用し、より実践的な評価を行っています。
+                     以下は、サッカー場面で見られる特性や行動と、それに対するアセスメントと支援アプローチです。
+                 </p>
+
+                 <!-- 社会性・コミュニケーション -->
+                 <div style="margin-bottom: 2rem; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden;">
+                     <div style="background: #e53e3e; color: white; padding: 1rem; font-weight: 600;">
+                         <i class="fas fa-users"></i> 社会性・コミュニケーション
+                     </div>
+                     <div style="padding: 1.5rem;">
+                         <div style="margin-bottom: 1.5rem;">
+                             <h5 style="color: #2c5282; margin-bottom: 0.5rem;">アイコンタクトが少ない</h5>
+                             <p><strong>支援アプローチ：</strong>視線を合わせる重要性を具体的な場面で示し、「パスを出す前に相手の顔を見る」練習を実施</p>
+                         </div>
+                         <div style="margin-bottom: 1.5rem;">
+                             <h5 style="color: #2c5282; margin-bottom: 0.5rem;">集団行動から離れ、ひとりで過ごす</h5>
+                             <p><strong>支援アプローチ：</strong>少人数から徐々に集団サイズを大きくし、役割を明確に与えて参加の成功体験を作る</p>
+                         </div>
+                         <div style="margin-bottom: 1.5rem;">
+                             <h5 style="color: #2c5282; margin-bottom: 0.5rem;">順番を待てない、割り込む</h5>
+                             <p><strong>支援アプローチ：</strong>視覚的なカウントダウンの導入、少人数のグループで順番待ちの練習</p>
+                         </div>
+                         <div>
+                             <h5 style="color: #2c5282; margin-bottom: 0.5rem;">他の子どもの反応を読み取れない</h5>
+                             <p><strong>支援アプローチ：</strong>表情カードを使った練習、「相手はどう思っているかな？」と声掛け</p>
+                         </div>
+                     </div>
+                 </div>
+
+                 <!-- 身体・運動 -->
+                 <div style="margin-bottom: 2rem; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden;">
+                     <div style="background: #38a169; color: white; padding: 1rem; font-weight: 600;">
+                         <i class="fas fa-running"></i> 身体・運動
+                     </div>
+                     <div style="padding: 1.5rem;">
+                         <div style="margin-bottom: 1.5rem;">
+                             <h5 style="color: #2c5282; margin-bottom: 0.5rem;">ボールコントロールが難しい</h5>
+                             <p><strong>支援アプローチ：</strong>動作の分解トレーニング、成功しやすい環境設定（大きいボール、短い距離）</p>
+                         </div>
+                         <div style="margin-bottom: 1.5rem;">
+                             <h5 style="color: #2c5282; margin-bottom: 0.5rem;">身体バランスが取りにくい</h5>
+                             <p><strong>支援アプローチ：</strong>バランスボードなどを使った基礎トレーニング、コアマッスルを鍛える遊び</p>
+                         </div>
+                         <div style="margin-bottom: 1.5rem;">
+                             <h5 style="color: #2c5282; margin-bottom: 0.5rem;">空間把握が苦手（ポジショニング）</h5>
+                             <p><strong>支援アプローチ：</strong>ゴム紐や色テープで区画を視覚化、「ここが君の場所」と具体的に指示</p>
+                         </div>
+                         <div>
+                             <h5 style="color: #2c5282; margin-bottom: 0.5rem;">他者の動きの模倣が難しい</h5>
+                             <p><strong>支援アプローチ：</strong>動作を言語化して説明、手をとって一緒に動く物理的ガイド</p>
+                         </div>
+                     </div>
+                 </div>
+
+                 <!-- 注意・集中 -->
+                 <div style="margin-bottom: 2rem; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden;">
+                     <div style="background: #d69e2e; color: white; padding: 1rem; font-weight: 600;">
+                         <i class="fas fa-eye"></i> 注意・集中
+                     </div>
+                     <div style="padding: 1.5rem;">
+                         <div style="margin-bottom: 1.5rem;">
+                             <h5 style="color: #2c5282; margin-bottom: 0.5rem;">指示を聞き逃す、理解していない</h5>
+                             <p><strong>支援アプローチ：</strong>視覚的サポート（絵や写真）の追加、シンプルな言葉で一つずつ指示</p>
+                         </div>
+                         <div style="margin-bottom: 1.5rem;">
+                             <h5 style="color: #2c5282; margin-bottom: 0.5rem;">活動中に離席・離脱する</h5>
+                             <p><strong>支援アプローチ：</strong>短時間・高頻度の活動に分割、適切な休憩タイムの設定</p>
+                         </div>
+                         <div style="margin-bottom: 1.5rem;">
+                             <h5 style="color: #2c5282; margin-bottom: 0.5rem;">他の刺激に気を取られやすい</h5>
+                             <p><strong>支援アプローチ：</strong>刺激を少なくした環境から始める、視覚的な注意の焦点化（マーカーなど）</p>
+                         </div>
+                         <div>
+                             <h5 style="color: #2c5282; margin-bottom: 0.5rem;">過集中になり切り替えが難しい</h5>
+                             <p><strong>支援アプローチ：</strong>視覚的なタイマーや予告、「あと1回したら次は○○だよ」と切り替えの準備</p>
+                         </div>
+                     </div>
+                 </div>
+
+                 <!-- 感覚処理 -->
+                 <div style="margin-bottom: 2rem; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden;">
+                     <div style="background: #805ad5; color: white; padding: 1rem; font-weight: 600;">
+                         <i class="fas fa-brain"></i> 感覚処理
+                     </div>
+                     <div style="padding: 1.5rem;">
+                         <div style="margin-bottom: 1.5rem;">
+                             <h5 style="color: #2c5282; margin-bottom: 0.5rem;">身体接触を極端に嫌がる</h5>
+                             <p><strong>支援アプローチ：</strong>徐々に慣らしていく段階的アプローチ、予測可能な接触から始める（ハイタッチなど）</p>
+                         </div>
+                         <div style="margin-bottom: 1.5rem;">
+                             <h5 style="color: #2c5282; margin-bottom: 0.5rem;">騒がしい環境で不安定になる</h5>
+                             <p><strong>支援アプローチ：</strong>静かな環境から徐々に慣らす、必要に応じてイヤーマフの使用</p>
+                         </div>
+                         <div style="margin-bottom: 1.5rem;">
+                             <h5 style="color: #2c5282; margin-bottom: 0.5rem;">動きの多い場面で混乱する</h5>
+                             <p><strong>支援アプローチ：</strong>少人数・遅いペースの活動から始める、視覚的な手がかりを増やす（色分けなど）</p>
+                         </div>
+                         <div>
+                             <h5 style="color: #2c5282; margin-bottom: 0.5rem;">感覚刺激を求める行動が多い</h5>
+                             <p><strong>支援アプローチ：</strong>適切な感覚入力を提供（ジャンプ、回転など）、活動前の感覚準備運動の導入</p>
+                         </div>
+                     </div>
+                 </div>
+
+                 <!-- 情緒・行動 -->
+                 <div style="margin-bottom: 2rem; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden;">
+                     <div style="background: #ed8936; color: white; padding: 1rem; font-weight: 600;">
+                         <i class="fas fa-heart"></i> 情緒・行動
+                     </div>
+                     <div style="padding: 1.5rem;">
+                         <div style="margin-bottom: 1.5rem;">
+                             <h5 style="color: #2c5282; margin-bottom: 0.5rem;">失敗や負けに過剰に反応する</h5>
+                             <p><strong>支援アプローチ：</strong>「失敗してもOK」の雰囲気作り、感情を言語化する支援（「悔しいね」など）</p>
+                         </div>
+                         <div style="margin-bottom: 1.5rem;">
+                             <h5 style="color: #2c5282; margin-bottom: 0.5rem;">予測できない変化に不安を示す</h5>
+                             <p><strong>支援アプローチ：</strong>視覚的スケジュールの使用、変更前の予告と理由の説明</p>
+                         </div>
+                         <div style="margin-bottom: 1.5rem;">
+                             <h5 style="color: #2c5282; margin-bottom: 0.5rem;">ルール理解が難しく混乱する</h5>
+                             <p><strong>支援アプローチ：</strong>視覚的なルール説明（図や写真）、シンプルな言葉での説明と実演</p>
+                         </div>
+                         <div>
+                             <h5 style="color: #2c5282; margin-bottom: 0.5rem;">自信がなく挑戦を避ける</h5>
+                             <p><strong>支援アプローチ：</strong>必ず成功できるレベルから始める、小さな成功を大きく称賛する</p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
+
+     <!-- 強みに焦点を当てたアセスメント -->
+     <section id="strengths" class="section" style="background: #f7fafc;">
+         <div class="container">
+             <h2 class="section-title">強みに焦点を当てたアセスメント</h2>
+             <div class="card">
+                 <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #4a5568;">
+                     サッカー療育では、「できないこと」だけでなく「できること」「得意なこと」「可能性」を見つけることを重視しています。
+                     以下は子どもたちの強みを発見し、伸ばすためのアセスメントポイントです。
+                 </p>
+                 
+                 <div class="grid">
+                     <div style="background: #f0f8ff; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #3182ce;">
+                         <h4 style="color: #2c5282; margin-bottom: 1rem;"><i class="fas fa-running"></i> 特定の動きの得意さ</h4>
+                         <p>走る、跳ぶ、バランスを取るなど、特定の動きが得意な場合、その強みを活かしたポジションや役割を提案します。例えば、走るのが速い子どもには広いスペースを使うポジションが向いているかもしれません。</p>
+                     </div>
+                     <div style="background: #f0fff4; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #38a169;">
+                         <h4 style="color: #2c5282; margin-bottom: 1rem;"><i class="fas fa-eye"></i> 視覚的な情報処理能力</h4>
+                         <p>視覚情報の処理が得意な子どもは、フィールド全体を見渡す力や空間把握能力が高いことがあります。この強みを活かし、戦術的な視点やゲーム理解を深めるアプローチを提供します。</p>
+                     </div>
+                     <div style="background: #fffaf0; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #d69e2e;">
+                         <h4 style="color: #2c5282; margin-bottom: 1rem;"><i class="fas fa-bullseye"></i> 集中力と持続性</h4>
+                         <p>特定の活動に強い集中力を発揮する子どもは、反復練習や精密なスキルトレーニングに向いています。この特性を活かして、技術的な側面を伸ばすプログラムを設計します。</p>
+                     </div>
+                     <div style="background: #faf5ff; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #805ad5;">
+                         <h4 style="color: #2c5282; margin-bottom: 1rem;"><i class="fas fa-route"></i> ルーティンへの適応力</h4>
+                         <p>決まったパターンを理解し実行するのが得意な子どもは、組織的なプレーやポジショニングの正確さを強みにできます。明確な役割と手順を提示することで、チーム内での重要な役割を担うことができます。</p>
+                     </div>
+                     <div style="background: #fff5f5; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #e53e3e;">
+                         <h4 style="color: #2c5282; margin-bottom: 1rem;"><i class="fas fa-handshake"></i> 共感性と協力性</h4>
+                         <p>他者への気づかいや協力が得意な子どもは、チームワークを高める存在となります。この特性を伸ばし、サポート役やコミュニケーションの中心的役割を担えるよう支援します。</p>
+                     </div>
+                     <div style="background: #f7fafc; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #4a5568;">
+                         <h4 style="color: #2c5282; margin-bottom: 1rem;"><i class="fas fa-battery-full"></i> エネルギーと熱意</h4>
+                         <p>高いエネルギーレベルと積極性は、適切に方向づけることで大きな強みになります。この特性を活かし、持久力や意欲を必要とするプレースタイルを発展させます。</p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
+
+     <!-- カリキュラム -->
+     <section id="curriculum" class="section">
+         <div class="container">
+             <h2 class="section-title">具体的なカリキュラム</h2>
+             <div class="card">
+                 <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #4a5568;">
+                     以下は、サッカー療育で実施される具体的なプログラムと、それぞれが主要な発達障害の問題にどのような効果をもたらすかを詳しく説明します。
+                 </p>
+
+                 <!-- プログラム1: ゲート通過シュート -->
+                 <div style="border: 1px solid #e2e8f0; border-radius: 15px; margin-bottom: 2rem; overflow: hidden;">
+                     <div style="background: linear-gradient(135deg, #3182ce, #2c5282); color: white; padding: 1.5rem;">
+                         <h3 style="margin-bottom: 0.5rem;"><i class="fas fa-futbol"></i> ゲート通過シュート</h3>
+                         <p style="opacity: 0.9;">コーンで構成されたゲートを通過しながらドリブルし、最後にシュート</p>
+                     </div>
+                     <div style="padding: 2rem;">
+                         <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; margin-bottom: 2rem;">
+                             <div>
+                                 <h4 style="color: #2c5282; margin-bottom: 1rem;">プログラム内容</h4>
+                                 <p><strong>基本ルール：</strong>コーンで構成されたゲートを通過しながらドリブルし、最後にシュート</p>
+                                 <p><strong>バリエーション：</strong>ゲート数や向きの調整、シュート地点を遠くするなど</p>
+                             </div>
+                             <div>
+                                 <h4 style="color: #2c5282; margin-bottom: 1rem;">発達障害への具体的な効果</h4>
+                                 <div style="background: #f0f8ff; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                                     <h5 style="color: #e53e3e; margin-bottom: 0.5rem;"><i class="fas fa-brain"></i> ASD（自閉スペクトラム症）への効果</h5>
+                                     <ul style="margin-left: 1.5rem; font-size: 0.9rem;">
+                                         <li>触覚刺激により感覚統合を促進</li>
+                                         <li>固有受容覚の向上で身体図式を改善</li>
+                                         <li>視覚的な目標（ゲート）で空間認識能力を向上</li>
+                                     </ul>
+                                 </div>
+                                 <div style="background: #f0fff4; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                                     <h5 style="color: #38a169; margin-bottom: 0.5rem;"><i class="fas fa-bolt"></i> ADHD多動/衝動性型への効果</h5>
+                                     <ul style="margin-left: 1.5rem; font-size: 0.9rem;">
+                                         <li>連続した運動で過剰エネルギーを適切に発散</li>
+                                         <li>ゲートを通過する目標により集中力を向上</li>
+                                         <li>協応動作の練習で自己制御能力を向上</li>
+                                     </ul>
+                                 </div>
+                                 <div style="background: #fffaf0; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                                     <h5 style="color: #d69e2e; margin-bottom: 0.5rem;"><i class="fas fa-eye"></i> ADHD不注意型への効果</h5>
+                                     <ul style="margin-left: 1.5rem; font-size: 0.9rem;">
+                                         <li>眼球運動の向上で視覚的注意力を強化</li>
+                                         <li>聴覚刺激（指示やフィードバック）で注意の持続を改善</li>
+                                         <li>段階的な課題で注意の分散を防止</li>
+                                     </ul>
+                                 </div>
+                                 <div style="background: #faf5ff; padding: 1rem; border-radius: 8px;">
+                                     <h5 style="color: #805ad5; margin-bottom: 0.5rem;"><i class="fas fa-puzzle-piece"></i> DCD（発達性協調運動障害）への効果</h5>
+                                     <ul style="margin-left: 1.5rem; font-size: 0.9rem;">
+                                         <li>運動企画能力の向上で複雑な動作を習得</li>
+                                         <li>バランス感覚の向上で身体の安定性を改善</li>
+                                         <li>協応動作の反復練習で運動スキルを向上</li>
+                                     </ul>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+
+                 <!-- プログラム2: けんけんシュート -->
+                 <div style="border: 1px solid #e2e8f0; border-radius: 15px; margin-bottom: 2rem; overflow: hidden;">
+                     <div style="background: linear-gradient(135deg, #38a169, #2f855a); color: white; padding: 1.5rem;">
+                         <h3 style="margin-bottom: 0.5rem;"><i class="fas fa-running"></i> けんけんシュート</h3>
+                         <p style="opacity: 0.9;">片足でけんけんしながら進み、3歩目でインステップシュート</p>
+                     </div>
+                     <div style="padding: 2rem;">
+                         <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; margin-bottom: 2rem;">
+                             <div>
+                                 <h4 style="color: #2c5282; margin-bottom: 1rem;">プログラム内容</h4>
+                                 <p><strong>基本ルール：</strong>片足でけんけんしながら進み、3歩目でインステップシュート</p>
+                                 <p><strong>バリエーション：</strong>ボールを後ろ・正面・横から転がしてシュート、バウンドボールで実施</p>
+                             </div>
+                             <div>
+                                 <h4 style="color: #2c5282; margin-bottom: 1rem;">発達障害への具体的な効果</h4>
+                                 <div style="background: #f0f8ff; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                                     <h5 style="color: #e53e3e; margin-bottom: 0.5rem;"><i class="fas fa-brain"></i> ASD（自閉スペクトラム症）への効果</h5>
+                                     <ul style="margin-left: 1.5rem; font-size: 0.9rem;">
+                                         <li>前庭核刺激により感覚統合を促進</li>
+                                         <li>身体図式の向上で自己の身体認識を改善</li>
+                                         <li>予測可能な動作パターンで不安を軽減</li>
+                                     </ul>
+                                 </div>
+                                 <div style="background: #f0fff4; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                                     <h5 style="color: #38a169; margin-bottom: 0.5rem;"><i class="fas fa-bolt"></i> ADHD多動/衝動性型への効果</h5>
+                                     <ul style="margin-left: 1.5rem; font-size: 0.9rem;">
+                                         <li>バランス練習で体幹の安定性を向上</li>
+                                         <li>運動企画により順序立てた行動を学習</li>
+                                         <li>協応動作で衝動性をコントロール</li>
+                                     </ul>
+                                 </div>
+                                 <div style="background: #fffaf0; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                                     <h5 style="color: #d69e2e; margin-bottom: 0.5rem;"><i class="fas fa-eye"></i> ADHD不注意型への効果</h5>
+                                     <ul style="margin-left: 1.5rem; font-size: 0.9rem;">
+                                         <li>けんけんのリズムで注意の持続を改善</li>
+                                         <li>3歩という明確な目標で注意の焦点化</li>
+                                         <li>身体と認知の協調で集中力を向上</li>
+                                     </ul>
+                                 </div>
+                                 <div style="background: #faf5ff; padding: 1rem; border-radius: 8px;">
+                                     <h5 style="color: #805ad5; margin-bottom: 0.5rem;"><i class="fas fa-puzzle-piece"></i> DCD（発達性協調運動障害）への効果</h5>
+                                     <ul style="margin-left: 1.5rem; font-size: 0.9rem;">
+                                         <li>片足バランスで体幹機能を強化</li>
+                                         <li>運動企画能力で複雑な動作を分解学習</li>
+                                         <li>協応動作の反復で運動パターンを習得</li>
+                                     </ul>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+
+                 <!-- プログラム3: コーンドリブル -->
+                 <div style="border: 1px solid #e2e8f0; border-radius: 15px; margin-bottom: 2rem; overflow: hidden;">
+                     <div style="background: linear-gradient(135deg, #d69e2e, #b7791f); color: white; padding: 1.5rem;">
+                         <h3 style="margin-bottom: 0.5rem;"><i class="fas fa-route"></i> コーンドリブル</h3>
+                         <p style="opacity: 0.9;">並べたコーンを様々な方法でドリブル（左右交互、足の部位別など）</p>
+                     </div>
+                     <div style="padding: 2rem;">
+                         <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; margin-bottom: 2rem;">
+                             <div>
+                                 <h4 style="color: #2c5282; margin-bottom: 1rem;">プログラム内容</h4>
+                                 <p><strong>基本ルール：</strong>並べたコーンを様々な方法でドリブル（左右交互、足の部位別など）</p>
+                                 <p><strong>バリエーション：</strong>コーン横通過、ジグザグ、横向き、足の部位を変える</p>
+                             </div>
+                             <div>
+                                 <h4 style="color: #2c5282; margin-bottom: 1rem;">発達障害への具体的な効果</h4>
+                                 <div style="background: #f0f8ff; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                                     <h5 style="color: #e53e3e; margin-bottom: 0.5rem;"><i class="fas fa-brain"></i> ASD（自閉スペクトラム症）への効果</h5>
+                                     <ul style="margin-left: 1.5rem; font-size: 0.9rem;">
+                                         <li>触覚刺激で感覚過敏への段階的適応</li>
+                                         <li>固有受容覚の向上で身体認識を改善</li>
+                                         <li>視覚的手がかり（コーン）で空間認識を向上</li>
+                                     </ul>
+                                 </div>
+                                 <div style="background: #f0fff4; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                                     <h5 style="color: #38a169; margin-bottom: 0.5rem;"><i class="fas fa-bolt"></i> ADHD多動/衝動性型への効果</h5>
+                                     <ul style="margin-left: 1.5rem; font-size: 0.9rem;">
+                                         <li>聴覚刺激（指示）で注意の転換を練習</li>
+                                         <li>眼球運動で視覚的注意力を向上</li>
+                                         <li>身体図式の改善で自己制御を強化</li>
+                                     </ul>
+                                 </div>
+                                 <div style="background: #fffaf0; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                                     <h5 style="color: #d69e2e; margin-bottom: 0.5rem;"><i class="fas fa-eye"></i> ADHD不注意型への効果</h5>
+                                     <ul style="margin-left: 1.5rem; font-size: 0.9rem;">
+                                         <li>運動企画で順序立てた思考を促進</li>
+                                         <li>協応動作で注意の分散を防止</li>
+                                         <li>バランス練習で集中力を向上</li>
+                                     </ul>
+                                 </div>
+                                 <div style="background: #faf5ff; padding: 1rem; border-radius: 8px;">
+                                     <h5 style="color: #805ad5; margin-bottom: 0.5rem;"><i class="fas fa-puzzle-piece"></i> DCD（発達性協調運動障害）への効果</h5>
+                                     <ul style="margin-left: 1.5rem; font-size: 0.9rem;">
+                                         <li>運動企画の向上で複雑な足さばきを習得</li>
+                                         <li>協応動作の反復で両足の協調性を改善</li>
+                                         <li>身体図式の発達で運動パターンを安定化</li>
+                                     </ul>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+
+                 <!-- プログラム4: 試合 -->
+                 <div style="border: 1px solid #e2e8f0; border-radius: 15px; margin-bottom: 2rem; overflow: hidden;">
+                     <div style="background: linear-gradient(135deg, #805ad5, #6b46c1); color: white; padding: 1.5rem;">
+                         <h3 style="margin-bottom: 0.5rem;"><i class="fas fa-trophy"></i> 試合</h3>
+                         <p style="opacity: 0.9;">サッカー形式の試合を行う</p>
+                     </div>
+                     <div style="padding: 2rem;">
+                         <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; margin-bottom: 2rem;">
+                             <div>
+                                 <h4 style="color: #2c5282; margin-bottom: 1rem;">プログラム内容</h4>
+                                 <p><strong>基本ルール：</strong>サッカー形式の試合を行う</p>
+                                 <p><strong>目的：</strong>これまでの練習の成果を統合し、実践的な場面での応用力を育む</p>
+                             </div>
+                             <div>
+                                 <h4 style="color: #2c5282; margin-bottom: 1rem;">発達障害への具体的な効果</h4>
+                                 <div style="background: #f0f8ff; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                                     <h5 style="color: #e53e3e; margin-bottom: 0.5rem;"><i class="fas fa-brain"></i> ASD（自閉スペクトラム症）への効果</h5>
+                                     <ul style="margin-left: 1.5rem; font-size: 0.9rem;">
+                                         <li>社会的スキルの向上：チームワークとコミュニケーション</li>
+                                         <li>視覚処理能力で状況判断力を改善</li>
+                                         <li>固有受容覚の活用で身体の使い方を最適化</li>
+                                     </ul>
+                                 </div>
+                                 <div style="background: #f0fff4; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                                     <h5 style="color: #38a169; margin-bottom: 0.5rem;"><i class="fas fa-bolt"></i> ADHD多動/衝動性型への効果</h5>
+                                     <ul style="margin-left: 1.5rem; font-size: 0.9rem;">
+                                         <li>聴覚刺激で状況に応じた判断力を向上</li>
+                                         <li>前庭核刺激で身体の安定性を向上</li>
+                                         <li>運動企画でチーム戦術を理解・実行</li>
+                                     </ul>
+                                 </div>
+                                 <div style="background: #fffaf0; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                                     <h5 style="color: #d69e2e; margin-bottom: 0.5rem;"><i class="fas fa-eye"></i> ADHD不注意型への効果</h5>
+                                     <ul style="margin-left: 1.5rem; font-size: 0.9rem;">
+                                         <li>バランス感覚で体幹の安定を通じた集中力向上</li>
+                                         <li>眼球運動で広い視野での注意配分を学習</li>
+                                         <li>身体図式の活用で自信を持った動作を実現</li>
+                                     </ul>
+                                 </div>
+                                 <div style="background: #faf5ff; padding: 1rem; border-radius: 8px;">
+                                     <h5 style="color: #805ad5; margin-bottom: 0.5rem;"><i class="fas fa-puzzle-piece"></i> DCD（発達性協調運動障害）への効果</h5>
+                                     <ul style="margin-left: 1.5rem; font-size: 0.9rem;">
+                                         <li>運動企画の統合で複雑な状況への対応力を向上</li>
+                                         <li>協応動作の実践で全身の協調性を改善</li>
+                                         <li>成功体験の積み重ねで運動への自信を構築</li>
+                                     </ul>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+
+                 <!-- その他の主要プログラムまとめ -->
+                 <div style="background: #f8f9fa; padding: 2rem; border-radius: 15px; border-left: 5px solid #6b46c1;">
+                     <h3 style="color: #2c5282; margin-bottom: 1.5rem;"><i class="fas fa-list"></i> その他の主要プログラム</h3>
+                     <div style="overflow-x: auto;">
+                         <table class="table" style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                             <thead>
+                                 <tr style="background: #2c5282; color: white;">
+                                     <th>プログラム名</th>
+                                     <th>内容</th>
+                                     <th>主な効果</th>
+                                     <th>特に効果的な障害</th>
+                                 </tr>
+                             </thead>
+                             <tbody>
+                                 <tr>
+                                     <td><strong>たまご落としゲーム</strong></td>
+                                     <td>片手にボールを乗せ、他選手のボールを落とす</td>
+                                     <td>視覚処理、前庭核、バランス</td>
+                                     <td><span class="tag">ASD</span><span class="tag">DCD</span></td>
+                                 </tr>
+                                 <tr>
+                                     <td><strong>フラフープ色鬼</strong></td>
+                                     <td>コーチが指定した色のフラフープに入る</td>
+                                     <td>視覚処理、注意力、判断力</td>
+                                     <td><span class="tag">ADHD不注意型</span></td>
+                                 </tr>
+                                 <tr>
+                                     <td><strong>ボール集めゲーム</strong></td>
+                                     <td>中央のボールを自陣に運ぶ（制限時間で競う）</td>
+                                     <td>触覚、固有受容覚、運動企画</td>
+                                     <td><span class="tag">ADHD多動型</span><span class="tag">DCD</span></td>
+                                 </tr>
+                                 <tr>
+                                     <td><strong>逆鬼ごっこ</strong></td>
+                                     <td>選手が鬼役でコーチを追いかける</td>
+                                     <td>前庭核、バランス、身体図式</td>
+                                     <td><span class="tag">ADHD多動型</span><span class="tag">ASD</span></td>
+                                 </tr>
+                                 <tr>
+                                     <td><strong>追跡ドリブル</strong></td>
+                                     <td>前の人の動きを見ながら後ろの人がドリブルで追う</td>
+                                     <td>触覚、視覚処理、聴覚刺激</td>
+                                     <td><span class="tag">ASD</span><span class="tag">ADHD不注意型</span></td>
+                                 </tr>
+                                 <tr>
+                                     <td><strong>様々なターン</strong></td>
+                                     <td>指定のターンを使って次のマーカーへ進む</td>
+                                     <td>前庭核、運動企画、身体図式</td>
+                                     <td><span class="tag">DCD</span><span class="tag">ASD</span></td>
+                                 </tr>
+                             </tbody>
+                         </table>
+                     </div>
+                 </div>
+
+                 <div style="background: linear-gradient(135deg, #e6fffa, #b2f5ea); padding: 2rem; border-radius: 15px; margin-top: 2rem; text-align: center;">
+                     <h3 style="color: #2c5282; margin-bottom: 1rem;"><i class="fas fa-star"></i> カリキュラムの特徴</h3>
+                     <p style="font-size: 1.1rem; color: #2d3748; line-height: 1.8;">
+                         全てのプログラムは、発達障害の特性に応じて柔軟に調整され、
+                         <strong>個別最適化</strong>されています。<br>
+                         感覚統合、運動能力、社会性、認知機能の向上を総合的に図り、
+                         子どもたち一人ひとりの<strong>強み</strong>を伸ばすことを重視しています。
+                     </p>
+                 </div>
+             </div>
+         </div>
+     </section>
+
+     <!-- Footer -->
+     <footer style="background: #2c5282; color: white; text-align: center; padding: 2rem 0; margin-top: 3rem;">
+         <div class="container">
+             <p>&copy; 2024 サッカー療育 - 発達障害の子どもたちのサポート</p>
+             <p style="margin-top: 0.5rem; opacity: 0.8;">すべての子どもたちの可能性を信じて</p>
+         </div>
+     </footer>
 </body>
-</html>
+</html> 
