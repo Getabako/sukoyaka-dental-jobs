@@ -214,6 +214,70 @@
             width: 80%;
         }
 
+        /* Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--bg-white);
+            min-width: 200px;
+            box-shadow: var(--shadow-strong);
+            border-radius: 12px;
+            padding: 0.5rem 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            list-style: none;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.8rem 1.5rem;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 0;
+            position: relative;
+        }
+
+        .dropdown-menu a::before,
+        .dropdown-menu a::after {
+            display: none;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--bg-lighter);
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .dropdown > a i {
+            margin-left: 0.5rem;
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown:hover > a i {
+            transform: rotate(180deg);
+        }
+
         .contact-btn {
             background: var(--gradient-primary) !important;
             color: white !important;
@@ -403,6 +467,44 @@
             max-width: 300px;
             text-align: center;
             margin-top: 2rem;
+        }
+
+        /* Mobile Dropdown Styles */
+        .mobile-dropdown-menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: rgba(45, 134, 89, 0.05);
+            border-radius: 12px;
+            margin-top: 0.5rem;
+        }
+
+        .mobile-dropdown-menu.active {
+            max-height: 200px;
+        }
+
+        .mobile-dropdown-menu li {
+            margin: 0;
+        }
+
+        .mobile-dropdown-menu a {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border-left: 3px solid var(--primary-color);
+            margin: 0.2rem 0;
+        }
+
+        .mobile-dropdown > a i {
+            margin-left: 0.5rem;
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-dropdown.active > a i {
+            transform: rotate(180deg);
         }
 
         /* Hero Slider Section */
@@ -810,7 +912,13 @@
             <nav>
                 <ul class="nav-menu">
                         <li><a href="#clinic-info">クリニック紹介</a></li>
-                        <li><a href="#jobs">求人情報</a></li>
+                        <li class="dropdown">
+                            <a href="#jobs">求人情報 <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="dentist-jobs.html">歯科医師求人</a></li>
+                                <li><a href="hygienist-jobs.html">歯科衛生士求人</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#benefits">働く環境</a></li>
                         <li><a href="#facilities">院内・設備</a></li>
                         <li><a href="#access">アクセス</a></li>
@@ -834,7 +942,13 @@
             <nav>
                 <ul class="nav-menu">
                     <li><a href="#clinic-info" onclick="closeMobileMenu()">クリニック紹介</a></li>
-                    <li><a href="#jobs" onclick="closeMobileMenu()">求人情報</a></li>
+                    <li class="mobile-dropdown">
+                        <a href="#jobs" onclick="toggleMobileDropdown(event)">求人情報 <i class="fas fa-chevron-down"></i></a>
+                        <ul class="mobile-dropdown-menu">
+                            <li><a href="dentist-jobs.html" onclick="closeMobileMenu()">歯科医師求人</a></li>
+                            <li><a href="hygienist-jobs.html" onclick="closeMobileMenu()">歯科衛生士求人</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#benefits" onclick="closeMobileMenu()">働く環境</a></li>
                     <li><a href="#facilities" onclick="closeMobileMenu()">院内・設備</a></li>
                     <li><a href="#access" onclick="closeMobileMenu()">アクセス</a></li>
@@ -3354,6 +3468,17 @@
                 mobileMenuBtn.classList.remove('active');
                 document.body.style.overflow = '';
             }
+        }
+
+        // Toggle mobile dropdown menu
+        function toggleMobileDropdown(event) {
+            event.preventDefault();
+            const dropdown = event.target.closest('.mobile-dropdown');
+            const dropdownMenu = dropdown.querySelector('.mobile-dropdown-menu');
+            
+            // Toggle active class
+            dropdown.classList.toggle('active');
+            dropdownMenu.classList.toggle('active');
         }
         
         // Hero Slider functionality
