@@ -621,6 +621,33 @@
             border: 1px solid var(--border-color);
         }
 
+        .job-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+        }
+
+        .view-details-btn {
+            margin-top: 1.5rem;
+            text-align: center;
+            padding: 0.8rem;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .premium-job-card:hover .view-details-btn {
+            background: var(--gradient-accent);
+            transform: translateX(5px);
+        }
+
         .featured-row:hover {
             background: linear-gradient(135deg, rgba(45, 134, 89, 0.05), rgba(74, 155, 107, 0.05)) !important;
             border-left: 6px solid var(--primary-color) !important;
@@ -829,6 +856,21 @@
                         <strong>熊本駅から徒歩10分・土曜17時まで診療</strong><br>
                         充実した教育体制と働きやすい環境で、やりがいのある仕事をしませんか？
                     </p>
+                    <div class="hero-job-banner">
+                        <div class="job-banner-content">
+                            <span class="banner-label">求人情報をチェック</span>
+                            <div class="banner-buttons">
+                                <a href="dentist-jobs.html" class="banner-btn dentist-btn">
+                                    <i class="fas fa-user-md"></i>
+                                    <span>歯科医師</span>
+                                </a>
+                                <a href="hygienist-jobs.html" class="banner-btn hygienist-btn">
+                                    <i class="fas fa-tooth"></i>
+                                    <span>歯科衛生士</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -837,12 +879,8 @@
                 <div class="slide-content">
                     <div class="hero-stats">
                         <div class="stat-item">
-                            <span class="stat-number">15</span>
+                            <span class="stat-number">26</span>
                             <div class="stat-label">総スタッフ数</div>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">0</span>
-                            <div class="stat-label">歯科衛生士離職率</div>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number">120</span>
@@ -853,6 +891,21 @@
                             <div class="stat-label">駐車場台数</div>
                         </div>
                     </div>
+                    <div class="hero-job-banner">
+                        <div class="job-banner-content">
+                            <span class="banner-label">詳細な求人情報はこちら</span>
+                            <div class="banner-buttons">
+                                <a href="dentist-jobs.html" class="banner-btn dentist-btn">
+                                    <i class="fas fa-user-md"></i>
+                                    <span>歯科医師求人</span>
+                                </a>
+                                <a href="hygienist-jobs.html" class="banner-btn hygienist-btn">
+                                    <i class="fas fa-tooth"></i>
+                                    <span>歯科衛生士求人</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -861,18 +914,47 @@
                 <div class="slide-content">
                     <h2>働きやすい環境づくり</h2>
                     <p>スタッフ全員が活き活きと働ける職場環境を整えています</p>
+                    <div class="hero-job-banner">
+                        <div class="job-banner-content">
+                            <span class="banner-label">募集中の職種をチェック</span>
+                            <div class="banner-buttons">
+                                <a href="dentist-jobs.html" class="banner-btn dentist-btn">
+                                    <i class="fas fa-user-md"></i>
+                                    <span>歯科医師求人</span>
+                                </a>
+                                <a href="hygienist-jobs.html" class="banner-btn hygienist-btn">
+                                    <i class="fas fa-tooth"></i>
+                                    <span>歯科衛生士求人</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
             <div class="slide" style="background-image: url('https://if-juku.net/wp-content/uploads/2025/06/slider4.jpg')">
                 <div class="slide-overlay"></div>
                 <div class="slide-content">
-                    <div class="cta-buttons">
-                        <a href="#contact" class="btn btn-primary">
-                            <i class="fas fa-envelope"></i>
-                            まずは見学・相談
-                        </a>
-                        <a href="tel:096-353-6000" class="btn btn-outline">
+                    <h2>歯科医師・歯科衛生士募集中</h2>
+                    <p>あなたのキャリアをさらに高めませんか？</p>
+                    <div class="hero-job-banner">
+                        <div class="job-banner-content">
+                            <span class="banner-label">今すぐ求人詳細をチェック</span>
+                            <div class="banner-buttons">
+                                <a href="dentist-jobs.html" class="banner-btn dentist-btn">
+                                    <i class="fas fa-user-md"></i>
+                                    <span>歯科医師求人</span>
+                                </a>
+                                <a href="hygienist-jobs.html" class="banner-btn hygienist-btn">
+                                    <i class="fas fa-tooth"></i>
+                                    <span>歯科衛生士求人</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-contact-note">
+                        <p>お気軽にお問い合わせください</p>
+                        <a href="tel:096-353-6000" class="phone-link">
                             <i class="fas fa-phone"></i>
                             096-353-6000
                         </a>
@@ -965,7 +1047,7 @@
                         <i class="fas fa-user-md"></i>
                 </div>
                     <h3>経験豊富なドクターと多職種連携</h3>
-                    <p>歯科医師9名（常勤3名・非常勤6名）、歯科衛生士17名（常勤9名・非常勤8名）、受付事務3名、歯科助手2名体制でチーム医療を実践。専門性の高い治療を提供します。</p>
+                    <p>歯科医師9名（常勤3名・非常勤6名）、歯科衛生士17名（常勤9名・非常勤8名）体制でチーム医療を実践。専門性の高い治療を提供します。</p>
             </div>
             </div>
         </div>
@@ -1327,1716 +1409,6 @@
          }
     </style>
 
-        <!-- Job Opportunities -->
-    <section id="jobs" class="jobs-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">詳細求人情報</h2>
-                <p class="section-subtitle">一緒に働く仲間を募集しています。あなたのスキルと経験を活かして、患者さまの健康を支えませんか？</p>
-            </div>
-
-            <div class="jobs-premium-container">
-                <!-- Premium Job Cards -->
-                <div class="premium-job-cards">
-                    <div class="premium-job-card dentist-card">
-                        <div class="premium-card-header">
-                            <div class="job-icon">
-                                <i class="fas fa-user-md"></i>
-                            </div>
-                            <h3>歯科医師</h3>
-                            <div class="job-count">2職種募集中</div>
-                        </div>
-                        <div class="salary-highlight">
-                            <span class="salary-from">月給700,000円〜</span>
-                            <span class="salary-note">経験5年以上の目安</span>
-                        </div>
-                        <div class="key-benefits">
-                            <span class="benefit-pill">歩合無し</span>
-                            <span class="benefit-pill">転居費補助</span>
-                            <span class="benefit-pill">研修充実</span>
-                        </div>
-                    </div>
-
-                    <div class="premium-job-card hygienist-card">
-                        <div class="premium-card-header">
-                            <div class="job-icon">
-                                <i class="fas fa-tooth"></i>
-                            </div>
-                            <h3>歯科衛生士</h3>
-                            <div class="job-count">2職種募集中</div>
-                        </div>
-                        <div class="salary-highlight">
-                            <span class="salary-from">月給250,000〜350,000円</span>
-                            <span class="salary-note">離職率0%の実績</span>
-                        </div>
-                        <div class="key-benefits">
-                            <span class="benefit-pill">昇給・賞与</span>
-                            <span class="benefit-pill">訪問診療</span>
-                            <span class="benefit-pill">有給取得率◎</span>
-                        </div>
-                    </div>
-
-                    <div class="premium-job-card assistant-card">
-                        <div class="premium-card-header">
-                            <div class="job-icon">
-                                <i class="fas fa-desktop"></i>
-                            </div>
-                            <h3>歯科助手・受付・事務</h3>
-                            <div class="job-count">2職種募集中</div>
-                        </div>
-                        <div class="salary-highlight">
-                            <span class="salary-from">月給180,000〜300,000円</span>
-                            <span class="salary-note">残業月3時間以下</span>
-                        </div>
-                        <div class="key-benefits">
-                            <span class="benefit-pill">制服貸与</span>
-                            <span class="benefit-pill">賞与年2回</span>
-                            <span class="benefit-pill">未経験OK</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Detailed Job Table -->
-                <div class="detailed-job-table">
-                    <div class="table-header">
-                        <h3><i class="fas fa-table"></i> 詳細求人一覧</h3>
-                        <p>すべての職種・雇用形態の詳細情報をご確認いただけます</p>
-                        <div class="common-benefits">
-                            <div class="benefit-item">
-                                <i class="fas fa-graduation-cap"></i>
-                                <span>院長フォローアップ研修</span>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-money-bill-wave"></i>
-                                <span>外部研修全額補助</span>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-gift"></i>
-                                <span>賞与有り</span>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-shield-alt"></i>
-                                <span>社会保険完備</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="responsive-table-wrapper">
-                        <table class="premium-job-table">
-                            <thead>
-                                <tr>
-                                    <th class="job-title-col">職種・雇用形態</th>
-                                    <th class="job-content-col">仕事内容</th>
-                                    <th class="salary-col">給与</th>
-                                    <th class="schedule-col">勤務時間</th>
-                                    <th class="holiday-col">休日休暇</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- 歯科医師 常勤 -->
-                                <tr class="job-row featured-row">
-                                    <td class="job-title-cell">
-                                        <div class="job-title-content">
-                                            <div class="job-badge dentist">
-                                                <i class="fas fa-user-md"></i>
-                                                歯科医師
-                                            </div>
-                                            <div class="job-type-row">
-                                                <div class="employment-type full-time">常勤</div>
-                                                <div class="featured-label">注目</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="job-content-cell">
-                                        <div class="content-list">
-                                            <span class="content-item">一般歯科</span>
-                                            <span class="content-item">小児歯科</span>
-                                            <span class="content-item">審美歯科</span>
-                                            <span class="content-item">矯正歯科</span>
-                                            <span class="content-item">口腔外科</span>
-                                            <span class="content-item">訪問診療</span>
-                                        </div>
-                                    </td>
-                                    <td class="salary-cell">
-                                        <div class="salary-main">月給700,000円〜</div>
-                                        <div class="salary-note">経験5年以上の目安</div>
-                                    </td>
-                                    <td class="schedule-cell">
-                                        <div class="schedule-item">
-                                            <strong>平日</strong><br>
-                                            8:45-12:45 / 14:00-18:15
-                                        </div>
-                                        <div class="schedule-item">
-                                            <strong>土曜</strong><br>
-                                            8:45-12:45 / 14:00-17:00
-                                        </div>
-                                    </td>
-                                    <td class="holiday-cell">
-                                        <div class="holiday-item">完全週休2日（日＋他1日）</div>
-                                        <div class="holiday-item">年間休日120日以上</div>
-                                        <div class="holiday-item">年末年始6日以上</div>
-                                        <div class="holiday-item">GW5日以上</div>
-                                        <div class="holiday-item highlight">有給100%取得</div>
-                                    </td>
-                                </tr>
-
-                                <!-- 歯科医師 非常勤 -->
-                                <tr class="job-row">
-                                    <td class="job-title-cell">
-                                        <div class="job-title-content">
-                                            <div class="job-badge dentist">
-                                                <i class="fas fa-user-md"></i>
-                                                歯科医師
-                                            </div>
-                                            <div class="job-type-row">
-                                                <div class="employment-type part-time">非常勤</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="job-content-cell">
-                                        <div class="content-list">
-                                            <span class="content-item">一般歯科</span>
-                                            <span class="content-item">小児歯科</span>
-                                            <span class="content-item">審美歯科</span>
-                                            <span class="content-item">矯正歯科</span>
-                                            <span class="content-item">口腔外科</span>
-                                            <span class="content-item">訪問診療</span>
-                                        </div>
-                                    </td>
-                                    <td class="salary-cell">
-                                        <div class="salary-main">日当35,000円〜</div>
-                                        <div class="salary-note">昇給あり・試用期間3ヶ月同額</div>
-                                    </td>
-                                    <td class="schedule-cell">
-                                        <div class="schedule-item">
-                                            <strong>平日・土曜</strong><br>
-                                            上記時間帯で応相談
-                                        </div>
-                                    </td>
-                                    <td class="holiday-cell">
-                                        <div class="holiday-item">週1日〜OK</div>
-                                        <div class="holiday-item">日曜定休</div>
-                                        <div class="holiday-item">有給あり</div>
-                                    </td>
-                                </tr>
-
-                                <!-- 歯科衛生士 正社員 -->
-                                <tr class="job-row featured-row">
-                                    <td class="job-title-cell">
-                                        <div class="job-title-content">
-                                            <div class="job-badge hygienist">
-                                                <i class="fas fa-tooth"></i>
-                                                歯科衛生士
-                                            </div>
-                                            <div class="job-type-row">
-                                                <div class="employment-type full-time">正社員</div>
-                                                <div class="featured-label">人気</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="job-content-cell">
-                                        <div class="content-list">
-                                            <span class="content-item">医師補助</span>
-                                            <span class="content-item">スケーリング</span>
-                                            <span class="content-item">ブラッシング指導</span>
-                                            <span class="content-item">外来診療</span>
-                                            <span class="content-item">訪問診療</span>
-                                        </div>
-                                    </td>
-                                    <td class="salary-cell">
-                                        <div class="salary-main">月給250,000〜350,000円</div>
-                                        <div class="salary-note">昇給・賞与あり</div>
-                                    </td>
-                                    <td class="schedule-cell">
-                                        <div class="schedule-item">
-                                            <strong>月〜金</strong><br>
-                                            8:45-12:45 / 14:00-18:15
-                                        </div>
-                                        <div class="schedule-item">
-                                            <strong>土曜</strong><br>
-                                            8:45-12:45 / 14:00-17:15
-                                        </div>
-                                        <div class="schedule-note">休憩75分</div>
-                                    </td>
-                                    <td class="holiday-cell">
-                                        <div class="holiday-item">完全週休2日（日＋他1日）</div>
-                                        <div class="holiday-item">年間休日120日以上</div>
-                                        <div class="holiday-item">盆3日・正月6日・GW</div>
-                                        <div class="holiday-item highlight">有給10日（6ヶ月後）取得率高</div>
-                                    </td>
-                                </tr>
-
-                                <!-- 歯科衛生士 パート -->
-                                <tr class="job-row">
-                                    <td class="job-title-cell">
-                                        <div class="job-title-content">
-                                            <div class="job-badge hygienist">
-                                                <i class="fas fa-tooth"></i>
-                                                歯科衛生士
-                                            </div>
-                                            <div class="job-type-row">
-                                                <div class="employment-type part-time">パート</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="job-content-cell">
-                                        <div class="content-list">
-                                            <span class="content-item">正社員同様</span>
-                                            <span class="content-item">外来＋訪問</span>
-                                            <span class="content-highlight">午前のみ・午後のみ可</span>
-                                        </div>
-                                    </td>
-                                    <td class="salary-cell">
-                                        <div class="salary-main">時給1,500〜2,000円</div>
-                                        <div class="salary-note">昇給あり</div>
-                                    </td>
-                                    <td class="schedule-cell">
-                                        <div class="schedule-item">
-                                            <strong>平日・土曜</strong><br>
-                                            上記時間帯で応相談
-                                        </div>
-                                        <div class="schedule-note">週1日〜可</div>
-                                    </td>
-                                    <td class="holiday-cell">
-                                        <div class="holiday-item">応相談</div>
-                                        <div class="holiday-item">日曜定休</div>
-                                    </td>
-                                </tr>
-
-                                <!-- 歯科助手・受付・事務 正社員 -->
-                                <tr class="job-row featured-row">
-                                    <td class="job-title-cell">
-                                        <div class="job-title-content">
-                                            <div class="job-badge assistant">
-                                                <i class="fas fa-desktop"></i>
-                                                歯科助手・受付・事務
-                                            </div>
-                                            <div class="job-type-row">
-                                                <div class="employment-type full-time">正社員</div>
-                                                <div class="featured-label">急募</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="job-content-cell">
-                                        <div class="content-list">
-                                            <span class="content-item">電話応対・予約管理</span>
-                                            <span class="content-item">会計・書類作成</span>
-                                            <span class="content-item">診療準備</span>
-                                            <span class="content-item">器具洗浄滅菌</span>
-                                            <span class="content-item">診療アシスト</span>
-                                            <span class="content-item">在庫管理・院内清掃</span>
-                                        </div>
-                                    </td>
-                                    <td class="salary-cell">
-                                        <div class="salary-main">月給180,000〜300,000円</div>
-                                        <div class="salary-note">経験・能力考慮／賞与年2回／昇給あり</div>
-                                    </td>
-                                    <td class="schedule-cell">
-                                        <div class="schedule-item">
-                                            <strong>月〜金</strong><br>
-                                            8:45-12:45 / 14:00-18:15
-                                        </div>
-                                        <div class="schedule-item">
-                                            <strong>土曜</strong><br>
-                                            8:45-12:45 / 14:00-17:15
-                                        </div>
-                                        <div class="schedule-note">休憩75分／残業月3時間以下</div>
-                                    </td>
-                                    <td class="holiday-cell">
-                                        <div class="holiday-item">完全週休2日（日＋平日1日シフト）</div>
-                                        <div class="holiday-item">年間休日120日以上</div>
-                                        <div class="holiday-item">有給取得率高</div>
-                                        <div class="holiday-item">年末年始6日以上・お盆3日・GW6日</div>
-                                        <div class="holiday-item">育児・産前産後・慶弔休暇</div>
-                                    </td>
-                                </tr>
-
-                                <!-- 歯科助手・受付・事務 パート -->
-                                <tr class="job-row">
-                                    <td class="job-title-cell">
-                                        <div class="job-title-content">
-                                            <div class="job-badge assistant">
-                                                <i class="fas fa-desktop"></i>
-                                                歯科助手・受付・事務
-                                            </div>
-                                            <div class="job-type-row">
-                                                <div class="employment-type part-time">パート</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="job-content-cell">
-                                        <div class="content-list">
-                                            <span class="content-item">電話応対・予約管理</span>
-                                            <span class="content-item">会計・書類作成</span>
-                                            <span class="content-item">診療準備</span>
-                                            <span class="content-item">器具洗浄滅菌</span>
-                                            <span class="content-item">診療アシスト</span>
-                                            <span class="content-item">在庫管理・院内清掃</span>
-                                        </div>
-                                    </td>
-                                    <td class="salary-cell">
-                                        <div class="salary-main">時給1,100〜1,800円</div>
-                                        <div class="salary-note">昇給あり</div>
-                                    </td>
-                                    <td class="schedule-cell">
-                                        <div class="schedule-item">
-                                            <strong>平日・土曜</strong><br>
-                                            8:45-12:45 / 14:00-18:15<br>
-                                            （土〜17:15）
-                                        </div>
-                                        <div class="schedule-note">4h〜応相談／週1日〜OK／午前のみ・午後のみOK</div>
-                                    </td>
-                                    <td class="holiday-cell">
-                                        <div class="holiday-item">日曜定休＋シフト制</div>
-                                        <div class="holiday-item">希望休応相談</div>
-                                        <div class="holiday-item">年間休日換算120日相当</div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <!-- Accordion Layout for Mobile -->
-                    <div class="job-accordion">
-                        <!-- 歯科医師 常勤 -->
-                        <div class="accordion-item featured">
-                            <button class="accordion-header featured" onclick="toggleAccordion(this)">
-                                <div class="accordion-title">
-                                    <div class="accordion-job-info">
-                                        <div class="accordion-job-badge">
-                                            <i class="fas fa-user-md"></i>
-                                            歯科医師
-                                        </div>
-                                        <div class="accordion-employment-type">常勤</div>
-                                    </div>
-                                    <div class="accordion-toggle">
-                                        <i class="fas fa-chevron-down"></i>
-                                    </div>
-                                </div>
-                            </button>
-                            <div class="accordion-content">
-                                <div class="accordion-content-inner">
-                                    <div class="accordion-details-grid">
-                                        <div class="accordion-detail-section">
-                                            <div class="accordion-detail-title">
-                                                <i class="fas fa-yen-sign"></i> 給与
-                                            </div>
-                                            <div class="accordion-salary-highlight">月給700,000円〜</div>
-                                            <p>経験5年以上の目安</p>
-                                        </div>
-                                        
-                                        <div class="accordion-detail-section">
-                                            <div class="accordion-detail-title">
-                                                <i class="fas fa-stethoscope"></i> 仕事内容
-                                            </div>
-                                            <div class="accordion-tags">
-                                                <span class="accordion-tag">一般歯科</span>
-                                                <span class="accordion-tag">小児歯科</span>
-                                                <span class="accordion-tag">審美歯科</span>
-                                                <span class="accordion-tag">矯正歯科</span>
-                                                <span class="accordion-tag">口腔外科</span>
-                                                <span class="accordion-tag">訪問診療</span>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="accordion-detail-section">
-                                            <div class="accordion-detail-title">
-                                                <i class="fas fa-clock"></i> 勤務時間
-                                            </div>
-                                            <ul class="accordion-list">
-                                                <li><strong>平日:</strong> 8:45-12:45 / 14:00-18:15</li>
-                                                <li><strong>土曜:</strong> 8:45-12:45 / 14:00-17:00</li>
-                                            </ul>
-                                        </div>
-                                        
-                                        <div class="accordion-detail-section">
-                                            <div class="accordion-detail-title">
-                                                <i class="fas fa-calendar-alt"></i> 休日休暇
-                                            </div>
-                                            <ul class="accordion-list">
-                                                <li>完全週休2日（日＋他1日）</li>
-                                                <li>年間休日120日以上</li>
-                                                <li>年末年始6日以上</li>
-                                                <li>GW5日以上</li>
-                                                <li class="highlight">有給100%取得</li>
-                                            </ul>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- 歯科医師 非常勤 -->
-                        <div class="accordion-item">
-                            <button class="accordion-header" onclick="toggleAccordion(this)">
-                                <div class="accordion-title">
-                                    <div class="accordion-job-info">
-                                        <div class="accordion-job-badge">
-                                            <i class="fas fa-user-md"></i>
-                                            歯科医師
-                                        </div>
-                                        <div class="accordion-employment-type">非常勤</div>
-                                    </div>
-                                    <div class="accordion-toggle">
-                                        <i class="fas fa-chevron-down"></i>
-                                    </div>
-                                </div>
-                            </button>
-                            <div class="accordion-content">
-                                <div class="accordion-content-inner">
-                                    <div class="accordion-details-grid">
-                                        <div class="accordion-detail-section">
-                                            <div class="accordion-detail-title">
-                                                <i class="fas fa-yen-sign"></i> 給与
-                                            </div>
-                                            <div class="accordion-salary-highlight">日当35,000円〜</div>
-                                            <p>昇給あり・試用期間3ヶ月同額</p>
-                                        </div>
-                                        
-                                        <div class="accordion-detail-section">
-                                            <div class="accordion-detail-title">
-                                                <i class="fas fa-stethoscope"></i> 仕事内容
-                                            </div>
-                                            <div class="accordion-tags">
-                                                <span class="accordion-tag">一般歯科</span>
-                                                <span class="accordion-tag">小児歯科</span>
-                                                <span class="accordion-tag">審美歯科</span>
-                                                <span class="accordion-tag">矯正歯科</span>
-                                                <span class="accordion-tag">口腔外科</span>
-                                                <span class="accordion-tag">訪問診療</span>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="accordion-detail-section">
-                                            <div class="accordion-detail-title">
-                                                <i class="fas fa-clock"></i> 勤務時間
-                                            </div>
-                                            <ul class="accordion-list">
-                                                <li><strong>平日・土曜:</strong> 週1日〜・時間応相談</li>
-                                            </ul>
-                                        </div>
-                                        
-                                        <div class="accordion-detail-section">
-                                            <div class="accordion-detail-title">
-                                                <i class="fas fa-calendar-alt"></i> 休日休暇
-                                            </div>
-                                            <ul class="accordion-list">
-                                                <li>勤務日数により応相談</li>
-                                                <li>日曜・祝日定休</li>
-                                                <li class="highlight">有給取得可</li>
-                                            </ul>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- 歯科衛生士 常勤 -->
-                        <div class="accordion-item">
-                            <button class="accordion-header" onclick="toggleAccordion(this)">
-                                <div class="accordion-title">
-                                    <div class="accordion-job-info">
-                                        <div class="accordion-job-badge">
-                                            <i class="fas fa-user-nurse"></i>
-                                            歯科衛生士
-                                        </div>
-                                        <div class="accordion-employment-type">常勤</div>
-                                    </div>
-                                    <div class="accordion-toggle">
-                                        <i class="fas fa-chevron-down"></i>
-                                    </div>
-                                </div>
-                            </button>
-                            <div class="accordion-content">
-                                <div class="accordion-content-inner">
-                                    <div class="accordion-details-grid">
-                                        <div class="accordion-detail-section">
-                                            <div class="accordion-detail-title">
-                                                <i class="fas fa-yen-sign"></i> 給与
-                                            </div>
-                                            <div class="accordion-salary-highlight">月給280,000円〜</div>
-                                            <p>経験により優遇・昇給あり</p>
-                                        </div>
-                                        
-                                        <div class="accordion-detail-section">
-                                            <div class="accordion-detail-title">
-                                                <i class="fas fa-stethoscope"></i> 仕事内容
-                                            </div>
-                                            <div class="accordion-tags">
-                                                <span class="accordion-tag">予防処置</span>
-                                                <span class="accordion-tag">保健指導</span>
-                                                <span class="accordion-tag">診療補助</span>
-                                                <span class="accordion-tag">訪問口腔ケア</span>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="accordion-detail-section">
-                                            <div class="accordion-detail-title">
-                                                <i class="fas fa-clock"></i> 勤務時間
-                                            </div>
-                                            <ul class="accordion-list">
-                                                <li><strong>平日:</strong> 8:45-12:45 / 14:00-18:15</li>
-                                                <li><strong>土曜:</strong> 8:45-12:45 / 14:00-17:00</li>
-                                            </ul>
-                                        </div>
-                                        
-                                        <div class="accordion-detail-section">
-                                            <div class="accordion-detail-title">
-                                                <i class="fas fa-calendar-alt"></i> 休日休暇
-                                            </div>
-                                            <ul class="accordion-list">
-                                                <li>完全週休2日（日＋他1日）</li>
-                                                <li>年間休日120日以上</li>
-                                                <li>年末年始6日以上</li>
-                                                <li class="highlight">有給100%取得</li>
-                                            </ul>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- 歯科助手・受付・事務 -->
-                        <div class="accordion-item">
-                            <button class="accordion-header" onclick="toggleAccordion(this)">
-                                <div class="accordion-title">
-                                    <div class="accordion-job-info">
-                                        <div class="accordion-job-badge">
-                                            <i class="fas fa-hands-helping"></i>
-                                            歯科助手・受付・事務
-                                        </div>
-                                        <div class="accordion-employment-type">常勤</div>
-                                    </div>
-                                    <div class="accordion-toggle">
-                                        <i class="fas fa-chevron-down"></i>
-                                    </div>
-                                </div>
-                            </button>
-                            <div class="accordion-content">
-                                <div class="accordion-content-inner">
-                                    <div class="accordion-details-grid">
-                                        <div class="accordion-detail-section">
-                                            <div class="accordion-detail-title">
-                                                <i class="fas fa-yen-sign"></i> 給与
-                                            </div>
-                                            <div class="accordion-salary-highlight">月給220,000円〜</div>
-                                            <p>未経験歓迎・昇給あり</p>
-                                        </div>
-                                        
-                                        <div class="accordion-detail-section">
-                                            <div class="accordion-detail-title">
-                                                <i class="fas fa-stethoscope"></i> 仕事内容
-                                            </div>
-                                            <div class="accordion-tags">
-                                                <span class="accordion-tag">診療補助</span>
-                                                <span class="accordion-tag">器具準備・片付け</span>
-                                                <span class="accordion-tag">患者案内</span>
-                                                <span class="accordion-tag">清掃・消毒</span>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="accordion-detail-section">
-                                            <div class="accordion-detail-title">
-                                                <i class="fas fa-clock"></i> 勤務時間
-                                            </div>
-                                            <ul class="accordion-list">
-                                                <li><strong>平日:</strong> 8:45-12:45 / 14:00-18:15</li>
-                                                <li><strong>土曜:</strong> 8:45-12:45 / 14:00-17:00</li>
-                                            </ul>
-                                        </div>
-                                        
-                                        <div class="accordion-detail-section">
-                                            <div class="accordion-detail-title">
-                                                <i class="fas fa-calendar-alt"></i> 休日休暇
-                                            </div>
-                                            <ul class="accordion-list">
-                                                <li>完全週休2日（日＋他1日）</li>
-                                                <li>年間休日120日以上</li>
-                                                <li>年末年始6日以上</li>
-                                                <li class="highlight">有給100%取得</li>
-                                            </ul>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- 歯科衛生士 パート -->
-                        <div class="accordion-item">
-                    <button class="accordion-header" onclick="toggleAccordion(this)">
-                        <div class="accordion-title">
-                            <div class="accordion-job-info">
-                                <div class="accordion-job-badge">
-                                    <i class="fas fa-tooth"></i>
-                                    歯科衛生士
-                                </div>
-                                <div class="accordion-employment-type">パート</div>
-                            </div>
-                            <div class="accordion-toggle">
-                                <i class="fas fa-chevron-down"></i>
-                            </div>
-                        </div>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="accordion-content-inner">
-                            <div class="accordion-details-grid">
-                                <div class="accordion-detail-section">
-                                    <div class="accordion-detail-title">
-                                        <i class="fas fa-yen-sign"></i> 給与
-                                    </div>
-                                    <div class="accordion-salary-highlight">時絥1,500〜2,000円</div>
-                                    <p>昇給あり</p>
-                                </div>
-                                
-                                <div class="accordion-detail-section">
-                                    <div class="accordion-detail-title">
-                                        <i class="fas fa-stethoscope"></i> 仕事内容
-                                    </div>
-                                    <div class="accordion-tags">
-                                        <span class="accordion-tag">正社員同様</span>
-                                        <span class="accordion-tag">外来＋訪問</span>
-                                        <span class="accordion-tag">午前のみ・午後のみ可</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="accordion-detail-section">
-                                    <div class="accordion-detail-title">
-                                        <i class="fas fa-clock"></i> 勤務時間
-                                    </div>
-                                    <ul class="accordion-list">
-                                        <li><strong>平日・土曜:</strong> 上記時間帯で応相談</li>
-                                        <li>週1日〜可</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="accordion-detail-section">
-                                    <div class="accordion-detail-title">
-                                        <i class="fas fa-calendar-alt"></i> 休日休暇
-                                    </div>
-                                    <ul class="accordion-list">
-                                        <li>応相談</li>
-                                        <li>日曜定休</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 歯科助手・受付・事務 パート -->
-                <div class="accordion-item">
-                    <button class="accordion-header" onclick="toggleAccordion(this)">
-                        <div class="accordion-title">
-                            <div class="accordion-job-info">
-                                <div class="accordion-job-badge">
-                                    <i class="fas fa-desktop"></i>
-                                    歯科助手・受付・事務
-                                </div>
-                                <div class="accordion-employment-type">パート</div>
-                            </div>
-                            <div class="accordion-toggle">
-                                <i class="fas fa-chevron-down"></i>
-                            </div>
-                        </div>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="accordion-content-inner">
-                            <div class="accordion-details-grid">
-                                <div class="accordion-detail-section">
-                                    <div class="accordion-detail-title">
-                                        <i class="fas fa-yen-sign"></i> 給与
-                                    </div>
-                                    <div class="accordion-salary-highlight">時絥1,100〜1,800円</div>
-                                    <p>昇給あり</p>
-                                </div>
-                                
-                                <div class="accordion-detail-section">
-                                    <div class="accordion-detail-title">
-                                        <i class="fas fa-stethoscope"></i> 仕事内容
-                                    </div>
-                                    <div class="accordion-tags">
-                                        <span class="accordion-tag">電話応対・予約管理</span>
-                                        <span class="accordion-tag">会計・書類作成</span>
-                                        <span class="accordion-tag">診療準備</span>
-                                        <span class="accordion-tag">器具洗浄滅菌</span>
-                                        <span class="accordion-tag">診療アシスト</span>
-                                        <span class="accordion-tag">在庫管理・院内清掃</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="accordion-detail-section">
-                                    <div class="accordion-detail-title">
-                                        <i class="fas fa-clock"></i> 勤務時間
-                                    </div>
-                                    <ul class="accordion-list">
-                                        <li><strong>平日・土曜:</strong> 8:45-12:45 / 14:00-18:15（土〜17:15）</li>
-                                        <li>4h〜応相談／週1日〜OK／午前のみ・午後のみOK</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="accordion-detail-section">
-                                    <div class="accordion-detail-title">
-                                        <i class="fas fa-calendar-alt"></i> 休日休暇
-                                    </div>
-                                    <ul class="accordion-list">
-                                        <li>日曜定休＋シフト制</li>
-                                        <li>希望休応相談</li>
-                                        <li>年間休日換算120日相当</li>
-                                    </ul>
-                                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="job-cta-section">
-                    <div class="cta-card">
-                        <h3><i class="fas fa-heart"></i> まずは見学から始めませんか？</h3>
-                        <p>「どんな職場か見てみたい」「スタッフの雰囲気を知りたい」そんな方も大歓迎です。</p>
-                        <div class="cta-buttons">
-                            <a href="tel:096-353-6000" class="btn btn-primary">
-                                <i class="fas fa-phone"></i>
-                                096-353-6000で相談
-                            </a>
-                            <a href="#contact" class="btn btn-outline">
-                                <i class="fas fa-envelope"></i>
-                                WEBで問い合わせ
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-        <style>
-        .jobs-section {
-            padding: 80px 0;
-            background: var(--gradient-light);
-        }
-
-        .jobs-premium-container {
-            display: flex;
-            flex-direction: column;
-            gap: 4rem;
-        }
-
-        /* Premium Job Cards */
-        .premium-job-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .premium-job-card {
-            background: var(--bg-white);
-            border-radius: 25px;
-            padding: 2.5rem;
-            box-shadow: var(--shadow-strong);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .premium-job-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: var(--gradient-primary);
-        }
-
-        .premium-job-card:hover {
-            transform: translateY(-12px) scale(1.02);
-            box-shadow: var(--shadow-strong);
-        }
-
-        .premium-card-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .job-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            box-shadow: 0 8px 20px rgba(45, 134, 89, 0.3);
-        }
-
-        .job-icon i {
-            font-size: 2.2rem;
-            color: white;
-        }
-
-        .premium-card-header h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .job-count {
-            background: var(--bg-lighter);
-            color: var(--primary-color);
-            padding: 0.3rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: inline-block;
-        }
-
-        .salary-highlight {
-            text-align: center;
-            margin: 1.5rem 0;
-        }
-
-        .salary-from {
-            display: block;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 0.3rem;
-        }
-
-        .salary-note {
-            font-size: 0.9rem;
-            color: var(--text-light);
-        }
-
-        .key-benefits {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            justify-content: center;
-        }
-
-        .benefit-pill {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            box-shadow: 0 2px 8px rgba(45, 134, 89, 0.2);
-        }
-
-        /* Detailed Job Table */
-        .detailed-job-table {
-            background: var(--bg-white);
-            border-radius: 25px;
-            padding: 3rem;
-            box-shadow: var(--shadow-strong);
-        }
-
-        .table-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .table-header h3 {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-        .table-header p {
-            color: var(--text-light);
-        }
-
-        .common-benefits {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            margin-top: 1rem;
-            padding: 1rem;
-            background: var(--bg-lighter);
-            border-radius: 10px;
-        }
-
-        .benefit-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        .benefit-item i {
-            color: var(--accent-color);
-        }
-
-        .responsive-table-wrapper {
-            overflow-x: auto;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        }
-
-        .premium-job-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: var(--bg-white);
-            font-size: 0.9rem;
-        }
-
-        .premium-job-table th {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 1.2rem 1rem;
-            text-align: left;
-            font-weight: 600;
-            font-size: 0.9rem;
-            white-space: nowrap;
-        }
-
-        .premium-job-table th:first-child {
-            border-radius: 15px 0 0 0;
-        }
-
-        .premium-job-table th:last-child {
-            border-radius: 0 15px 0 0;
-        }
-
-        .job-row {
-            transition: all 0.3s ease;
-        }
-
-        .job-row:hover {
-            background: var(--bg-lighter);
-            transform: scale(1.01);
-        }
-
-        .featured-row {
-            background: linear-gradient(135deg, rgba(45, 134, 89, 0.02), rgba(74, 155, 107, 0.02));
-            border-left: 4px solid var(--primary-color);
-        }
-
-        .premium-job-table td {
-            padding: 1.5rem 1rem;
-            border-bottom: 1px solid var(--border-color);
-            vertical-align: top;
-            height: 200px;
-        }
-
-        .job-title-content {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .job-type-row {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .job-badge {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.85rem;
-            color: white;
-            width: fit-content;
-        }
-
-        .job-badge.dentist {
-            background: linear-gradient(135deg, #27ae60, #2ecc71);
-        }
-
-        .job-badge.hygienist {
-            background: linear-gradient(135deg, #3498db, #5dade2);
-        }
-
-        .job-badge.assistant {
-            background: linear-gradient(135deg, #9b59b6, #bb8fce);
-        }
-
-        .employment-type {
-            padding: 0.3rem 0.6rem;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            width: fit-content;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 100%;
-        }
-
-        .employment-type.full-time {
-            background: var(--bg-lighter);
-            color: var(--primary-color);
-            border: 1px solid var(--primary-color);
-        }
-
-        .employment-type.part-time {
-            background: #fff3cd;
-            color: #856404;
-            border: 1px solid #ffeaa7;
-        }
-
-        .featured-label {
-            background: var(--gradient-accent);
-            color: white;
-            padding: 0.2rem 0.6rem;
-            border-radius: 10px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            width: fit-content;
-            animation: pulse 2s infinite;
-        }
-
-        .content-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.3rem;
-        }
-
-        .content-item {
-            background: var(--bg-lighter);
-            color: var(--text-color);
-            padding: 0.2rem 0.6rem;
-            border-radius: 10px;
-            font-size: 0.8rem;
-            border: 1px solid var(--border-color);
-        }
-
-        .content-highlight {
-            background: var(--gradient-accent);
-            color: white;
-            padding: 0.2rem 0.6rem;
-            border-radius: 10px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .salary-main {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 0.3rem;
-        }
-
-        .salary-note {
-            font-size: 0.8rem;
-            color: var(--text-light);
-            line-height: 1.3;
-        }
-
-        .schedule-item {
-            margin-bottom: 0.8rem;
-            padding: 0.5rem;
-            background: var(--bg-lighter);
-            border-radius: 8px;
-            font-size: 0.85rem;
-        }
-
-        .schedule-note {
-            font-size: 0.8rem;
-            color: var(--text-light);
-            font-style: italic;
-        }
-
-        .holiday-item {
-            margin-bottom: 0.5rem;
-            font-size: 0.85rem;
-            color: var(--text-color);
-        }
-
-        .holiday-item.highlight {
-            background: var(--bg-lighter);
-            color: var(--primary-color);
-            padding: 0.3rem 0.6rem;
-            border-radius: 10px;
-            font-weight: 600;
-        }
-
-        .benefit-list {
-            display: flex;
-            flex-direction: column;
-            gap: 0.3rem;
-        }
-
-        .benefit-highlight {
-            background: var(--gradient-accent);
-            color: white;
-            padding: 0.3rem 0.6rem;
-            border-radius: 10px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            width: fit-content;
-        }
-
-        .benefit-item {
-            background: var(--bg-lighter);
-            color: var(--text-color);
-            padding: 0.2rem 0.6rem;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            border: 1px solid var(--border-color);
-        }
-
-        /* CTA Section */
-        .job-cta-section {
-            display: flex;
-            justify-content: center;
-        }
-
-        .cta-card {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 3rem;
-            border-radius: 25px;
-            text-align: center;
-            max-width: 100%;
-            box-shadow: var(--shadow-strong);
-        }
-
-        .cta-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-        .cta-card p {
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cta-buttons .btn {
-            min-width: 200px;
-        }
-
-        .cta-buttons .btn-outline {
-            border: 2px solid white;
-            background: transparent;
-        }
-
-        @media (max-width: 1200px) {
-            .premium-job-table {
-                font-size: 0.8rem;
-            }
-
-            .premium-job-table th,
-            .premium-job-table td {
-                padding: 1rem 0.7rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 10px;
-            }
-            
-            .premium-job-cards {
-                grid-template-columns: 1fr;
-            }
-
-            .detailed-job-table {
-                padding: 1rem;
-            }
-
-            /* Show accordion layout on mobile */
-            .responsive-table-wrapper {
-                display: none;
-            }
-            
-            .job-accordion {
-                display: block !important;
-            }
-            
-            .common-benefits {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
-            
-            .mobile-job-cards {
-                display: none;
-            }
-            
-            .mobile-job-card {
-                background: var(--bg-white);
-                border-radius: 15px;
-                padding: 1.5rem;
-                margin-bottom: 1.5rem;
-                box-shadow: var(--shadow);
-                border-left: 4px solid var(--primary-color);
-            }
-            
-            .mobile-job-card.featured {
-                background: linear-gradient(135deg, rgba(45, 134, 89, 0.02), rgba(74, 155, 107, 0.02));
-                border-left-width: 6px;
-            }
-            
-            .mobile-card-header {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 0.5rem;
-                margin-bottom: 1rem;
-                align-items: center;
-            }
-            
-            .mobile-job-badge {
-                background: var(--gradient-primary);
-                color: white;
-                padding: 0.4rem 0.8rem;
-                border-radius: 20px;
-                font-size: 0.8rem;
-                font-weight: 600;
-                display: flex;
-                align-items: center;
-                gap: 0.3rem;
-            }
-            
-            .mobile-employment-type {
-                background: var(--bg-lighter);
-                color: var(--primary-color);
-                padding: 0.3rem 0.6rem;
-                border-radius: 15px;
-                font-size: 0.75rem;
-                font-weight: 600;
-            }
-            
-            .mobile-featured-label {
-                background: var(--gradient-accent);
-                color: white;
-                padding: 0.2rem 0.5rem;
-                border-radius: 10px;
-                font-size: 0.7rem;
-                font-weight: 600;
-            }
-            
-            .mobile-card-section {
-                margin-bottom: 1rem;
-                padding-bottom: 1rem;
-                border-bottom: 1px solid var(--border-color);
-            }
-            
-            .mobile-card-section:last-child {
-                margin-bottom: 0;
-                padding-bottom: 0;
-                border-bottom: none;
-            }
-            
-            .mobile-section-title {
-                font-size: 0.9rem;
-                font-weight: 600;
-                color: var(--primary-color);
-                margin-bottom: 0.5rem;
-                display: flex;
-                align-items: center;
-                gap: 0.3rem;
-            }
-            
-            .mobile-content-tags {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 0.4rem;
-            }
-            
-            .mobile-content-tag {
-                background: var(--bg-lighter);
-                color: var(--text-color);
-                padding: 0.2rem 0.6rem;
-                border-radius: 12px;
-                font-size: 0.75rem;
-            }
-            
-            .mobile-salary-main {
-                font-size: 1.1rem;
-                font-weight: 700;
-                color: var(--primary-color);
-                margin-bottom: 0.3rem;
-            }
-            
-            .mobile-salary-note {
-                font-size: 0.8rem;
-                color: var(--text-light);
-            }
-            
-            .mobile-schedule-item {
-                background: var(--bg-lighter);
-                padding: 0.5rem;
-                border-radius: 8px;
-                margin-bottom: 0.5rem;
-                font-size: 0.8rem;
-            }
-            
-            .mobile-schedule-item:last-child {
-                margin-bottom: 0;
-            }
-            
-            .mobile-holiday-item {
-                display: flex;
-                align-items: center;
-                gap: 0.3rem;
-                margin-bottom: 0.3rem;
-                font-size: 0.8rem;
-            }
-            
-            .mobile-holiday-item::before {
-                content: '✓';
-                color: var(--success-color);
-                font-weight: bold;
-            }
-            
-            .mobile-holiday-item.highlight {
-                background: rgba(39, 174, 96, 0.1);
-                padding: 0.3rem 0.5rem;
-                border-radius: 6px;
-                color: var(--success-color);
-                font-weight: 600;
-            }
-            
-            .mobile-benefit-tags {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 0.4rem;
-            }
-            
-            .mobile-benefit-highlight {
-                background: var(--gradient-accent);
-                color: white;
-                padding: 0.3rem 0.6rem;
-                border-radius: 12px;
-                font-size: 0.75rem;
-                font-weight: 600;
-            }
-            
-            .mobile-benefit-item {
-                background: var(--bg-lighter);
-                color: var(--text-color);
-                padding: 0.3rem 0.6rem;
-                border-radius: 12px;
-                font-size: 0.75rem;
-            }
-
-            .cta-card {
-                padding: 2rem;
-                margin: 0 1rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-        
-        /* Hide mobile cards and accordion on desktop */
-        .mobile-job-cards {
-            display: none;
-        }
-        
-        .job-accordion {
-            display: none;
-        }
-        
-        /* Playful Accordion Design */
-        .accordion-item {
-            margin-bottom: 1.5rem;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            background: var(--bg-white);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .accordion-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
-        
-        .accordion-item.featured {
-            background: linear-gradient(135deg, rgba(45, 134, 89, 0.05), rgba(74, 155, 107, 0.03));
-            border: 2px solid var(--primary-color);
-        }
-        
-        .accordion-header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 1.2rem 1.5rem;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            border: none;
-            width: 100%;
-            text-align: left;
-            font-family: inherit;
-        }
-        
-        .accordion-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s ease;
-        }
-        
-        .accordion-header:hover::before {
-            left: 100%;
-        }
-
-        @media (min-width: 769px) {
-            .accordion-item.mobile-only {
-                display: none;
-            }
-        }
-        
-        .accordion-header.featured {
-            background: linear-gradient(135deg, var(--accent-color), #e67e22);
-            animation: glow 2s infinite alternate;
-        }
-        
-        @keyframes glow {
-            0% {
-                box-shadow: 0 0 5px rgba(243, 156, 18, 0.5);
-            }
-            100% {
-                box-shadow: 0 0 20px rgba(243, 156, 18, 0.8), 0 0 30px rgba(243, 156, 18, 0.4);
-            }
-        }
-        
-        .accordion-title {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .accordion-job-info {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            flex: 1;
-        }
-        
-        .accordion-job-badge {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 0.5rem 1rem;
-            border-radius: 15px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            backdrop-filter: blur(10px);
-        }
-        
-        .accordion-employment-type {
-            background: rgba(255, 255, 255, 0.3);
-            padding: 0.3rem 0.6rem;
-            border-radius: 10px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 80px;
-        }
-        
-        .accordion-featured-badge {
-            background: linear-gradient(45deg, #ff6b6b, #feca57);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            animation: bounce 1s infinite alternate;
-        }
-        
-        @keyframes bounce {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-3px); }
-        }
-        
-        .accordion-toggle {
-            background: rgba(255, 255, 255, 0.2);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            color: white;
-            font-size: 1.2rem;
-        }
-        
-        .accordion-toggle:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: scale(1.1);
-        }
-        
-        .accordion-toggle.active {
-            transform: rotate(180deg);
-            background: rgba(255, 255, 255, 0.4);
-        }
-        
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            background: var(--bg-white);
-        }
-        
-        .accordion-content.active {
-            max-height: 1000px;
-            box-shadow: inset 0 2px 10px rgba(93, 211, 158, 0.1);
-        }
-        
-        .accordion-content-inner {
-            padding: 2rem 1.5rem;
-            background: linear-gradient(145deg, #ffffff, #f8fffe);
-        }
-        
-        .accordion-details-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-        
-        .accordion-detail-section {
-            background: var(--bg-lighter);
-            border-radius: 15px;
-            padding: 1.2rem;
-            border-left: 4px solid var(--primary-color);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .accordion-detail-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-        }
-        
-        .accordion-detail-title {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .accordion-salary-highlight {
-            font-size: 1.8rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #5dd39e, #4acc8b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
-            text-shadow: 0 2px 10px rgba(93, 211, 158, 0.2);
-            display: inline-block;
-            animation: pulse-text 2s infinite;
-        }
-        
-        @keyframes pulse-text {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-        
-        .accordion-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-        
-        .accordion-tag {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-        
-        .accordion-tag.highlight {
-            background: var(--gradient-accent);
-            animation: pulse 2s infinite;
-        }
-        
-        .accordion-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .accordion-list li {
-            padding: 0.4rem 0;
-            border-bottom: 1px solid rgba(45, 134, 89, 0.1);
-            position: relative;
-            padding-left: 1.5rem;
-        }
-        
-        .accordion-list li:last-child {
-            border-bottom: none;
-        }
-        
-        .accordion-list li::before {
-            content: '✨';
-            position: absolute;
-            left: 0;
-            color: var(--primary-color);
-        }
-        
-        .accordion-list li.highlight {
-            background: rgba(39, 174, 96, 0.1);
-            border-radius: 8px;
-            padding: 0.5rem 0.5rem 0.5rem 2rem;
-            margin: 0.2rem 0;
-            font-weight: 600;
-            color: var(--success-color);
-        }
-        
-        .accordion-list li.highlight::before {
-            content: '🌟';
-        }
-    </style>
-
     <!-- Benefits & Work Environment -->
     <section id="benefits" class="benefits-section">
          <div class="container">
@@ -3095,15 +1467,33 @@
                      </div>
                      </div>
 
+            <!-- Job Detail Buttons -->
+            <div class="job-cta-section">
+                <div class="job-cta-content">
+                    <h3>さらに詳しい求人情報をチェック</h3>
+                    <p>当院での働き方や待遇について、より詳細な情報をご覧いただけます</p>
+                    <div class="job-cta-buttons">
+                        <a href="dentist-jobs.html" class="btn btn-primary">
+                            <i class="fas fa-user-md"></i>
+                            歯科医師求人詳細
+                        </a>
+                        <a href="hygienist-jobs.html" class="btn btn-outline">
+                            <i class="fas fa-tooth"></i>
+                            歯科衛生士求人詳細
+                        </a>
+                    </div>
+                </div>
+            </div>
+
             <div class="staff-info">
                 <div class="staff-stats">
                     <div class="stat-card">
                         <img src="https://if-juku.net/wp-content/uploads/2025/06/3.jpg" alt="日本の歯科クリニックで明るく働くスタッフたちの集合写真">
                         <div class="stat-content">
                             <h4>スタッフ構成</h4>
-                            <p>歯科医師9名 / 歯科衛生士17名 / 受付事務3名 / 歯科助手2名</p>
+                            <p>歯科医師9名 / 歯科衛生士17名</p>
                             <div class="stat-details">
-                                <span><i class="fas fa-users"></i> 総計31名</span>
+                                <span><i class="fas fa-users"></i> 総計26名</span>
                                 <span><i class="fas fa-birthday-cake"></i> 平均年齢34歳</span>
                                 <span><i class="fas fa-clock"></i> 平均勤続年数2年</span>
                             </div>
@@ -3183,6 +1573,24 @@
                              </div>
                                  </div>
                                  </div>
+
+            <!-- Job Detail Buttons -->
+            <div class="job-cta-section">
+                <div class="job-cta-content">
+                    <h3>充実した設備で働きませんか？</h3>
+                    <p>最新の設備と働きやすい環境で、あなたのスキルを活かしてください</p>
+                    <div class="job-cta-buttons">
+                        <a href="dentist-jobs.html" class="btn btn-primary">
+                            <i class="fas fa-user-md"></i>
+                            歯科医師求人詳細
+                        </a>
+                        <a href="hygienist-jobs.html" class="btn btn-outline">
+                            <i class="fas fa-tooth"></i>
+                            歯科衛生士求人詳細
+                        </a>
+                    </div>
+                </div>
+            </div>
     </section>
 
     <!-- Services -->
@@ -3458,6 +1866,337 @@
             font-weight: 600;
         }
 
+        /* Job CTA Section Styles */
+        .job-cta-section {
+            background: var(--gradient-primary);
+            border-radius: 25px;
+            padding: 3rem 2rem;
+            margin: 3rem 0;
+            text-align: center;
+            box-shadow: var(--shadow-strong);
+        }
+
+        .job-cta-content h3 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .job-cta-content p {
+            color: white;
+            opacity: 0.9;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .job-cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .final-job-cta {
+            background: var(--bg-lighter);
+            padding: 4rem 0;
+        }
+
+        /* Slide content styles */
+        .slide-content h1 {
+            line-height: 1.4;
+            margin-bottom: 1.5rem;
+        }
+
+        .slide-content .hero-subtitle {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* Hero Job Banner Styles */
+        .hero-job-banner {
+            position: relative;
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 100;
+        }
+
+        .job-banner-content {
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.98) 0%, 
+                rgba(248, 250, 252, 0.95) 25%,
+                rgba(240, 247, 255, 0.92) 50%,
+                rgba(255, 255, 255, 0.95) 75%,
+                rgba(248, 250, 252, 0.98) 100%);
+            backdrop-filter: blur(25px) saturate(180%);
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            border-radius: 25px;
+            padding: 2rem 2.5rem;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.1),
+                0 8px 16px rgba(45, 134, 89, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            animation: bannerFloat 4s ease-in-out infinite, bannerGlow 6s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+            z-index: 50;
+        }
+
+        .job-banner-content::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                from 0deg,
+                transparent,
+                rgba(45, 134, 89, 0.03),
+                transparent,
+                rgba(255, 107, 53, 0.03),
+                transparent
+            );
+            animation: bannerRotate 20s linear infinite;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        @keyframes bannerGlow {
+            0%, 100% {
+                box-shadow: 
+                    0 20px 40px rgba(0, 0, 0, 0.1),
+                    0 8px 16px rgba(45, 134, 89, 0.05),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            }
+            50% {
+                box-shadow: 
+                    0 25px 50px rgba(0, 0, 0, 0.15),
+                    0 12px 24px rgba(45, 134, 89, 0.1),
+                    0 0 30px rgba(45, 134, 89, 0.1),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+            }
+        }
+
+        @keyframes bannerRotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .banner-label {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.2rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .banner-label::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 1px;
+        }
+
+        .banner-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            z-index: 150;
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .banner-btn i,
+        .banner-btn span {
+            position: relative;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .banner-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .banner-btn:hover::before {
+            left: 100%;
+        }
+
+        .banner-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+            transition: all 0.6s ease;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .banner-btn:hover::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        .dentist-btn {
+            background: linear-gradient(135deg, 
+                var(--primary-color) 0%, 
+                var(--secondary-color) 50%, 
+                #5cb85c 100%);
+            color: white;
+            box-shadow: 
+                0 8px 25px rgba(45, 134, 89, 0.3),
+                0 3px 10px rgba(45, 134, 89, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+
+        .dentist-btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            background: linear-gradient(135deg, 
+                #2d8659 0%, 
+                #4a9b6b 30%, 
+                #5cb85c 70%, 
+                #6cc76c 100%);
+            box-shadow: 
+                0 12px 35px rgba(45, 134, 89, 0.4),
+                0 6px 15px rgba(45, 134, 89, 0.3),
+                0 0 20px rgba(45, 134, 89, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+        }
+
+        .hygienist-btn {
+            background: linear-gradient(135deg, 
+                var(--accent-color) 0%, 
+                #ff8a5c 50%, 
+                #ffa07a 100%);
+            color: white;
+            box-shadow: 
+                0 8px 25px rgba(255, 107, 53, 0.3),
+                0 3px 10px rgba(255, 107, 53, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+
+        .hygienist-btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            background: linear-gradient(135deg, 
+                #ff6b35 0%, 
+                #ff8a5c 30%, 
+                #ffa07a 70%, 
+                #ffb399 100%);
+            box-shadow: 
+                0 12px 35px rgba(255, 107, 53, 0.4),
+                0 6px 15px rgba(255, 107, 53, 0.3),
+                0 0 20px rgba(255, 107, 53, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+        }
+
+        @keyframes bannerFloat {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .job-cta-section {
+                padding: 2rem 1rem;
+                margin: 2rem 0;
+            }
+
+            .job-cta-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .job-cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .job-cta-buttons .btn {
+                width: 280px;
+            }
+
+            .hero-job-banner {
+                margin-top: 1.5rem;
+                width: 100%;
+            }
+
+            .job-banner-content {
+                padding: 1.5rem 1.5rem;
+            }
+
+            .banner-label {
+                font-size: 0.9rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .banner-buttons {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+
+            .banner-btn {
+                width: 100%;
+                justify-content: center;
+                padding: 0.8rem 1rem;
+                font-size: 0.85rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .staff-stats {
                 grid-template-columns: 1fr;
@@ -3534,6 +2273,28 @@
                          </div>
                      </div>
                  </div>
+        </div>
+    </section>
+
+    <!-- Final Job CTA -->
+    <section class="final-job-cta">
+        <div class="container">
+            <div class="job-cta-section">
+                <div class="job-cta-content">
+                    <h3>まずは求人詳細をチェック！</h3>
+                    <p>お問い合わせの前に、詳細な求人情報をご確認ください</p>
+                    <div class="job-cta-buttons">
+                        <a href="dentist-jobs.html" class="btn btn-primary">
+                            <i class="fas fa-user-md"></i>
+                            歯科医師求人詳細
+                        </a>
+                        <a href="hygienist-jobs.html" class="btn btn-outline">
+                            <i class="fas fa-tooth"></i>
+                            歯科衛生士求人詳細
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -3625,7 +2386,6 @@
                                 <option value="">選択してください</option>
                                 <option value="dentist">歯科医師</option>
                                 <option value="hygienist">歯科衛生士</option>
-                                <option value="assistant">歯科助手・受付・事務</option>
                             </select>
                         </div>
 

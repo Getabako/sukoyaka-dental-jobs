@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歯科医師求人詳細 | すこやか歯科クリニック</title>
+    <meta name="description" content="熊本駅徒歩10分のすこやか歯科クリニックでは歯科医師を募集中。月給700,000円〜、完全週休2日制、充実した教育体制で働きやすい環境です。">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2d8659;
+            --secondary-color: #4a9b6b;
+            --accent-color: #ff6b35;
+            --text-color: #333;
+            --text-light: #666;
+            --bg-white: #ffffff;
+            --bg-light: #f9fafb;
+            --bg-lighter: #f0f7f2;
+            --border-color: #e5e5e5;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-strong: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            --gradient-accent: linear-gradient(135deg, var(--accent-color), #ff8a5c);
+            --gradient-light: linear-gradient(135deg, #f5fffe 0%, #f0f7f2 100%);
+        }
+
+        body {
+            font-family: 'Noto Sans JP', 'Inter', sans-serif;
+            color: var(--text-color);
+            background: var(--bg-white);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--bg-white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: var(--gradient-light);
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+        }
+
+        /* Tab Navigation */
+        .tab-nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: -30px 0 40px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .tab-btn {
+            padding: 1rem 3rem;
+            background: var(--bg-white);
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+
+        .tab-btn.active {
+            background: var(--gradient-primary);
+            color: white;
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .tab-btn:hover:not(.active) {
+            background: var(--bg-lighter);
+            transform: translateY(-2px);
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Job Details Section */
+        .job-details-section {
+            padding: 60px 0;
+            background: var(--bg-white);
+        }
+
+        .job-overview {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 3rem;
+            border-radius: 25px;
+            margin-bottom: 4rem;
+            box-shadow: var(--shadow-strong);
+        }
+
+        .job-overview h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .overview-item {
+            text-align: center;
+        }
+
+        .overview-item i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .overview-item h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .overview-item p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        /* Detail Cards */
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .detail-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .detail-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .detail-card h3 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .detail-card ul {
+            list-style: none;
+        }
+
+        .detail-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .detail-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Requirements Section */
+        .requirements-section {
+            background: var(--bg-lighter);
+            padding: 60px 0;
+        }
+
+        .requirements-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .requirements-content h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        .requirements-list {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .requirements-list h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .requirements-list ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .requirements-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .requirements-list li:last-child {
+            border-bottom: none;
+        }
+
+        .requirements-list i {
+            color: var(--accent-color);
+        }
+
+        /* Benefits Showcase */
+        .benefits-showcase {
+            padding: 60px 0;
+            background: var(--bg-white);
+        }
+
+        .benefits-showcase h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .benefit-card {
+            background: var(--gradient-light);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .benefit-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-content p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--primary-color);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .tab-nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 0 20px;
+            }
+
+            .tab-btn {
+                width: 100%;
+                padding: 1rem 2rem;
+            }
+
+            .job-overview {
+                padding: 2rem;
+            }
+
+            .overview-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 280px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-tooth"></i>
+                    <span>すこやか歯科クリニック</span>
+                </a>
+                <a href="index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>求人一覧へ戻る</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>
+                <i class="fas fa-user-md"></i>
+                歯科医師募集
+            </h1>
+            <p>経験豊富な方も、これから成長したい方も歓迎します</p>
+        </div>
+    </section>
+
+    <!-- Tab Navigation -->
+    <div class="container">
+        <div class="tab-nav">
+            <button class="tab-btn active" onclick="showTab('fulltime')">常勤</button>
+            <button class="tab-btn" onclick="showTab('parttime')">非常勤・パート</button>
+        </div>
+    </div>
+
+    <!-- Job Details Section -->
+    <section class="job-details-section">
+        <div class="container">
+            <!-- Full-time Tab Content -->
+            <div id="fulltime" class="tab-content active">
+                <div class="job-overview">
+                    <h2>常勤歯科医師</h2>
+                    <div class="overview-grid">
+                        <div class="overview-item">
+                            <i class="fas fa-yen-sign"></i>
+                            <h3>月給700,000円〜</h3>
+                            <p>経験5年以上の目安</p>
+                        </div>
+                        <div class="overview-item">
+                            <i class="fas fa-calendar-check"></i>
+                            <h3>完全週休2日</h3>
+                            <p>年間休日120日以上</p>
+                        </div>
+                        <div class="overview-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>研修充実</h3>
+                            <p>外部研修費用全額補助</p>
+                        </div>
+                        <div class="overview-item">
+                            <i class="fas fa-heart"></i>
+                            <h3>歩合なし</h3>
+                            <p>安定した収入を保証</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details-grid">
+                    <div class="detail-card">
+                        <h3><i class="fas fa-stethoscope"></i> 仕事内容</h3>
+                        <ul>
+                            <li>一般歯科診療</li>
+                            <li>予防歯科・メンテナンス</li>
+                            <li>小児歯科</li>
+                            <li>訪問歯科診療</li>
+                            <li>口腔外科処置</li>
+                            <li>審美歯科・補綴治療</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-card">
+                        <h3><i class="fas fa-clock"></i> 勤務時間</h3>
+                        <ul>
+                            <li>月〜金：8:45-12:45 / 14:00-18:15</li>
+                            <li>土曜日：8:45-12:45 / 14:00-17:15</li>
+                            <li>休憩時間：75分</li>
+                            <li>残業：月平均10時間以下</li>
+                            <li>訪問診療：週1〜2回程度</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-card">
+                        <h3><i class="fas fa-gift"></i> 待遇・福利厚生</h3>
+                        <ul>
+                            <li>賞与年2回（4ヶ月分）</li>
+                            <li>退職金制度あり</li>
+                            <li>社会保険完備</li>
+                            <li>転居費用補助（上限30万円）</li>
+                            <li>学会・セミナー参加費全額補助</li>
+                            <li>制服貸与</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-card">
+                        <h3><i class="fas fa-calendar-alt"></i> 休日休暇</h3>
+                        <ul>
+                            <li>完全週休2日（日曜＋他1日）</li>
+                            <li>年間休日120日以上</li>
+                            <li>年末年始休暇（6日以上）</li>
+                            <li>夏季休暇（お盆3日）</li>
+                            <li>GW休暇（5〜6日）</li>
+                            <li>有給休暇（初年度10日）</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-card">
+                        <h3><i class="fas fa-users"></i> 職場環境</h3>
+                        <ul>
+                            <li>歯科医師9名体制</li>
+                            <li>歯科衛生士17名</li>
+                            <li>最新設備完備（CT、マイクロスコープ等）</li>
+                            <li>電子カルテシステム</li>
+                            <li>専用駐車場あり</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-card">
+                        <h3><i class="fas fa-chart-line"></i> キャリアパス</h3>
+                        <ul>
+                            <li>分院長候補として活躍可能</li>
+                            <li>専門分野の深化をサポート</li>
+                            <li>訪問診療チームリーダー</li>
+                            <li>若手指導・教育担当</li>
+                            <li>経営参画の機会あり</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Part-time Tab Content -->
+            <div id="parttime" class="tab-content">
+                <div class="job-overview">
+                    <h2>非常勤・パート歯科医師</h2>
+                    <div class="overview-grid">
+                        <div class="overview-item">
+                            <i class="fas fa-yen-sign"></i>
+                            <h3>時給5,000円〜</h3>
+                            <p>経験・スキルにより優遇</p>
+                        </div>
+                        <div class="overview-item">
+                            <i class="fas fa-clock"></i>
+                            <h3>週1日〜OK</h3>
+                            <p>ライフスタイルに合わせて</p>
+                        </div>
+                        <div class="overview-item">
+                            <i class="fas fa-calendar"></i>
+                            <h3>勤務日応相談</h3>
+                            <p>柔軟なシフト対応</p>
+                        </div>
+                        <div class="overview-item">
+                            <i class="fas fa-handshake"></i>
+                            <h3>ダブルワークOK</h3>
+                            <p>他院との兼業可能</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details-grid">
+                    <div class="detail-card">
+                        <h3><i class="fas fa-stethoscope"></i> 仕事内容</h3>
+                        <ul>
+                            <li>一般歯科診療</li>
+                            <li>得意分野を活かした診療</li>
+                            <li>常勤医のサポート</li>
+                            <li>訪問診療（希望者のみ）</li>
+                            <li>専門外来の担当も可</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-card">
+                        <h3><i class="fas fa-clock"></i> 勤務条件</h3>
+                        <ul>
+                            <li>勤務日数：週1日〜相談可</li>
+                            <li>勤務時間：4時間〜フルタイム</li>
+                            <li>曜日固定・シフト制選択可</li>
+                            <li>午前のみ・午後のみOK</li>
+                            <li>土曜日勤務できる方歓迎</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-card">
+                        <h3><i class="fas fa-gift"></i> 待遇</h3>
+                        <ul>
+                            <li>交通費支給（上限あり）</li>
+                            <li>制服貸与</li>
+                            <li>昇給あり</li>
+                            <li>正社員登用制度あり</li>
+                            <li>研修参加支援</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements Section -->
+    <section class="requirements-section">
+        <div class="container">
+            <div class="requirements-content">
+                <h2>応募要項</h2>
+                <div class="requirements-list">
+                    <h3>必須条件</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> 歯科医師免許をお持ちの方</li>
+                        <li><i class="fas fa-check-circle"></i> 臨床経験1年以上</li>
+                        <li><i class="fas fa-check-circle"></i> コミュニケーション能力のある方</li>
+                    </ul>
+                </div>
+                <div class="requirements-list">
+                    <h3>歓迎条件</h3>
+                    <ul>
+                        <li><i class="fas fa-star"></i> 訪問診療経験のある方</li>
+                        <li><i class="fas fa-star"></i> 小児歯科経験のある方</li>
+                        <li><i class="fas fa-star"></i> 専門医・認定医資格をお持ちの方</li>
+                        <li><i class="fas fa-star"></i> マネジメント経験のある方</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Showcase -->
+    <section class="benefits-showcase">
+        <div class="container">
+            <h2>当院で働く魅力</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-laptop-medical"></i>
+                    <h3>最新設備完備</h3>
+                    <p>CT、マイクロスコープなど最新機器を導入。質の高い診療を実現できます。</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-users"></i>
+                    <h3>チーム医療</h3>
+                    <p>経験豊富な歯科医師9名体制。お互いに学び合える環境です。</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>安定経営</h3>
+                    <p>開業3年で安定した患者数。歩合制ではなく固定給で安心です。</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>ワークライフバランス</h3>
+                    <p>完全週休2日、有給取得率高。プライベートも大切にできます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>まずは見学から始めませんか？</h2>
+                <p>院内の雰囲気や設備をご覧いただき、私たちと一緒に働くイメージを持っていただければ幸いです。</p>
+                <div class="cta-buttons">
+                    <a href="tel:096-353-6000" class="btn btn-white">
+                        <i class="fas fa-phone"></i>
+                        096-353-6000で相談
+                    </a>
+                    <a href="index.html#contact" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i>
+                        WEBで問い合わせ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showTab(tabName) {
+            // Remove active class from all tabs and buttons
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Add active class to selected tab and button
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
