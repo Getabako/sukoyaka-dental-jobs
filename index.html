@@ -860,11 +860,11 @@
                         <div class="job-banner-content">
                             <span class="banner-label">求人情報をチェック</span>
                             <div class="banner-buttons">
-                                <a href="dentist-jobs.html" class="banner-btn dentist-btn">
+                                <a href="dentist-jobs.html" class="banner-btn dentist-btn" onclick="console.log('Dentist button clicked from slide 1')">
                                     <i class="fas fa-user-md"></i>
                                     <span>歯科医師</span>
                                 </a>
-                                <a href="hygienist-jobs.html" class="banner-btn hygienist-btn">
+                                <a href="hygienist-jobs.html" class="banner-btn hygienist-btn" onclick="console.log('Hygienist button clicked from slide 1')">
                                     <i class="fas fa-tooth"></i>
                                     <span>歯科衛生士</span>
                                 </a>
@@ -895,11 +895,11 @@
                         <div class="job-banner-content">
                             <span class="banner-label">詳細な求人情報はこちら</span>
                             <div class="banner-buttons">
-                                <a href="dentist-jobs.html" class="banner-btn dentist-btn">
+                                <a href="dentist-jobs.html" class="banner-btn dentist-btn" onclick="console.log('Dentist button clicked')">
                                     <i class="fas fa-user-md"></i>
                                     <span>歯科医師求人</span>
                                 </a>
-                                <a href="hygienist-jobs.html" class="banner-btn hygienist-btn">
+                                <a href="hygienist-jobs.html" class="banner-btn hygienist-btn" onclick="console.log('Hygienist button clicked')">
                                     <i class="fas fa-tooth"></i>
                                     <span>歯科衛生士求人</span>
                                 </a>
@@ -918,11 +918,11 @@
                         <div class="job-banner-content">
                             <span class="banner-label">募集中の職種をチェック</span>
                             <div class="banner-buttons">
-                                <a href="dentist-jobs.html" class="banner-btn dentist-btn">
+                                <a href="dentist-jobs.html" class="banner-btn dentist-btn" onclick="console.log('Dentist button clicked')">
                                     <i class="fas fa-user-md"></i>
                                     <span>歯科医師求人</span>
                                 </a>
-                                <a href="hygienist-jobs.html" class="banner-btn hygienist-btn">
+                                <a href="hygienist-jobs.html" class="banner-btn hygienist-btn" onclick="console.log('Hygienist button clicked')">
                                     <i class="fas fa-tooth"></i>
                                     <span>歯科衛生士求人</span>
                                 </a>
@@ -941,11 +941,11 @@
                         <div class="job-banner-content">
                             <span class="banner-label">今すぐ求人詳細をチェック</span>
                             <div class="banner-buttons">
-                                <a href="dentist-jobs.html" class="banner-btn dentist-btn">
+                                <a href="dentist-jobs.html" class="banner-btn dentist-btn" onclick="console.log('Dentist button clicked')">
                                     <i class="fas fa-user-md"></i>
                                     <span>歯科医師求人</span>
                                 </a>
-                                <a href="hygienist-jobs.html" class="banner-btn hygienist-btn">
+                                <a href="hygienist-jobs.html" class="banner-btn hygienist-btn" onclick="console.log('Hygienist button clicked')">
                                     <i class="fas fa-tooth"></i>
                                     <span>歯科衛生士求人</span>
                                 </a>
@@ -1901,6 +1901,20 @@
             padding: 4rem 0;
         }
 
+        /* Hero Contact Note Styles */
+        .hero-contact-note {
+            margin-top: 1rem;
+            text-align: center;
+            z-index: 5;
+            position: relative;
+        }
+
+        .hero-contact-note p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
         /* Slide content styles */
         .slide-content h1 {
             line-height: 1.4;
@@ -1920,7 +1934,8 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-            z-index: 100;
+            z-index: 150;
+            isolation: isolate;
         }
 
         .job-banner-content {
@@ -2038,12 +2053,13 @@
             border: 2px solid transparent;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            z-index: 150;
+            z-index: 200;
             cursor: pointer;
             user-select: none;
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
+            isolation: isolate;
         }
 
         .banner-btn i,
@@ -3144,8 +3160,8 @@
             }
         });
 
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        // Smooth scrolling (exclude banner buttons)
+        document.querySelectorAll('a[href^="#"]:not(.banner-btn)').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
@@ -3414,6 +3430,23 @@
                 }, 100);
             }
         }
+
+        // Ensure banner buttons work correctly
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.banner-btn').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const href = this.getAttribute('href');
+                    console.log('Banner button clicked, navigating to:', href);
+                    
+                    if (href && !href.startsWith('#') && !href.startsWith('tel:')) {
+                        // Force navigation for external pages
+                        window.location.href = href;
+                        return false;
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html> 
