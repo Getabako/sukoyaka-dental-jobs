@@ -1406,12 +1406,25 @@
             line-height: 1.6;
         }
 
-        .director-message {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
+        section.director-message {
+            background: var(--gradient-primary) !important;
+            color: white !important;
+            min-height: 100vh !important;
+            height: 100vh !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            position: relative !important;
+            overflow: hidden !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            box-sizing: border-box !important;
+        }
+
+        /* Override any conflicting section styles */
+        section.director-message.section {
+            padding: 0 !important;
+            height: 100vh !important;
         }
 
         .director-message::before {
@@ -1429,32 +1442,38 @@
             max-width: 100%;
             padding: 0 20px;
             width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .message-content {
             display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 4rem;
+            grid-template-columns: 400px 1fr;
+            gap: 6rem;
             align-items: center;
             max-width: 1400px;
             margin: 0 auto;
+            padding: 2rem 0;
         }
 
         .director-photo img {
             width: 100%;
-            height: 300px;
+            height: 400px;
             object-fit: cover;
-            border-radius: 20px;
+            border-radius: 25px;
             border: 4px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         .message-text h2 {
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
+            font-size: 3rem;
+            margin-bottom: 1rem;
         }
 
         .message-text h3 {
-            font-size: 1.3rem;
+            font-size: 1.6rem;
             opacity: 0.9;
             margin-bottom: 2rem;
         }
@@ -1468,7 +1487,7 @@
         }
 
         .message-text blockquote p {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             font-style: italic;
             margin: 0;
         }
@@ -1476,6 +1495,7 @@
         .message-text > p {
             opacity: 0.9;
             line-height: 1.7;
+            font-size: 1.2rem;
         }
 
                  @media (max-width: 768px) {
@@ -1483,6 +1503,30 @@
              .message-content {
                  grid-template-columns: 1fr;
                  gap: 2rem;
+             }
+
+             section.director-message {
+                 min-height: 100vh !important;
+                 height: 100vh !important;
+                 padding: 0 !important;
+                 display: flex !important;
+                 align-items: center !important;
+             }
+
+             .director-photo img {
+                 height: 300px;
+             }
+
+             .message-text h2 {
+                 font-size: 2.2rem;
+             }
+
+             .message-text h3 {
+                 font-size: 1.3rem;
+             }
+
+             .message-text blockquote p {
+                 font-size: 1.2rem;
              }
              
              .clinic-details {
@@ -3577,6 +3621,22 @@
                     }
                 });
             });
+        });
+
+        // Force director message section height
+        document.addEventListener('DOMContentLoaded', function() {
+            const directorSection = document.querySelector('.director-message');
+            if (directorSection) {
+                directorSection.style.height = '100vh';
+                directorSection.style.minHeight = '100vh';
+                directorSection.style.display = 'flex';
+                directorSection.style.alignItems = 'center';
+                directorSection.style.justifyContent = 'center';
+                directorSection.style.padding = '0';
+                directorSection.style.margin = '0';
+                directorSection.style.boxSizing = 'border-box';
+                console.log('Director message section height forced to 100vh');
+            }
         });
     </script>
 </body>
