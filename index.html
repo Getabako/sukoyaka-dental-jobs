@@ -434,11 +434,13 @@
             transform: scale(1.1) rotateY(-15deg);
             transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
             perspective: 1000px;
+            pointer-events: none;
         }
 
         .slide.active {
             opacity: 1;
             transform: scale(1) rotateY(0deg);
+            pointer-events: auto;
         }
 
         .slide.prev {
@@ -1934,7 +1936,7 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-            z-index: 150;
+            z-index: 1000;
             isolation: isolate;
         }
 
@@ -2053,7 +2055,7 @@
             border: 2px solid transparent;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            z-index: 200;
+            z-index: 9999;
             cursor: pointer;
             user-select: none;
             -webkit-user-select: none;
@@ -2066,7 +2068,6 @@
         .banner-btn span {
             position: relative;
             z-index: 2;
-            pointer-events: none;
         }
 
         .banner-btn::before {
@@ -3433,16 +3434,21 @@
 
         // Ensure banner buttons work correctly
         document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.banner-btn').forEach(button => {
+            document.querySelectorAll('.banner-btn').forEach((button, index) => {
+                const slideParent = button.closest('.slide');
+                const slideIndex = slideParent ? Array.from(slideParent.parentNode.children).indexOf(slideParent) + 1 : 'unknown';
+                
                 button.addEventListener('click', function(e) {
                     e.stopPropagation();
+                    e.preventDefault();
+                    
                     const href = this.getAttribute('href');
-                    console.log('Banner button clicked, navigating to:', href);
+                    console.log(`Banner button clicked from slide ${slideIndex}, navigating to:`, href);
                     
                     if (href && !href.startsWith('#') && !href.startsWith('tel:')) {
                         // Force navigation for external pages
+                        console.log('Forcing navigation to:', href);
                         window.location.href = href;
-                        return false;
                     }
                 });
             });
